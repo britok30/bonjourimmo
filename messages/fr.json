@@ -1,0 +1,643 @@
+{
+  "home": {
+    "theme": {
+      "toggle": "Changer le thème",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "nav": {
+      "pricing": "Tarifs",
+      "signIn": "Se connecter",
+      "browse": "Parcourir"
+    },
+    "hero": {
+      "new": "Découvrez une nouvelle façon de vendre et louer en France",
+      "title": "Révolutionner l'immobilier entre particuliers",
+      "subtitle": "Une plateforme innovante permettant aux propriétaires de vendre, louer ou proposer leurs biens de vacances directement—sans commissions, publication simplifiée et conçue pour être l'alternative numéro 1 aux agences immobilières traditionnelles.",
+      "cta": {
+        "primary": "Publier votre annonce",
+        "secondary": "En savoir plus"
+      }
+    },
+    "benefits": {
+      "title": "Pourquoi nous choisir ?",
+      "commission": {
+        "title": "Aucun frais caché",
+        "description": "Des tarifs transparents, un forfait fixe, sans aucune commission."
+      },
+      "direct": {
+        "title": "Contrôle total",
+        "description": "Vous êtes maître de vos annonces—gérez et communiquez directement avec les acheteurs ou locataires."
+      },
+      "control": {
+        "title": "Outils de dernière génération",
+        "description": "Mettez votre bien en valeur avec un design moderne, plus de photos et une navigation fluide."
+      },
+      "secure": {
+        "title": "Sécurisé et fiable",
+        "description": "Une plateforme vérifiée avec des utilisateurs de confiance et un support client réactif."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "step1": {
+        "title": "Créez votre annonce",
+        "description": "Ajoutez des photos de qualité, des détails précis et une description attrayante."
+      },
+      "step2": {
+        "title": "Connectez-vous avec acheteurs ou locataires",
+        "description": "Recevez des demandes directement et gérez les échanges selon vos préférences."
+      },
+      "step3": {
+        "title": "Concluez vos transactions",
+        "description": "Finalisez vos ventes ou locations sans intermédiaire ni frais imprévus."
+      }
+    },
+    "transparency": {
+      "title": "Pourquoi choisir BonjourImmo plutôt qu'une agence traditionnelle ?",
+      "bonjourImmo": {
+        "title": "Pourquoi BonjourImmo ?",
+        "noCommission": "Aucun frais de commission, économisez des milliers.",
+        "directControl": "Contrôle direct de vos annonces et de vos communications.",
+        "streamlinedPosting": "Publication simplifiée et sans effort.",
+        "effortlessManagement": "Gérez tout dans un tableau de bord simple.",
+        "affordability": "Des plans abordables conçus pour les propriétaires privés."
+      },
+      "agencies": {
+        "title": "Pourquoi pas les agences traditionnelles ?",
+        "highCommission": "Des commissions élevées qui réduisent vos profits.",
+        "lackOfControl": "Contrôle limité sur votre annonce et vos communications.",
+        "delays": "Des délais causés par des intermédiaires et des étapes inutiles.",
+        "hiddenFees": "Des frais cachés qui peuvent surprendre.",
+        "limitedTransparency": "Manque de transparence dans les processus et les coûts."
+      }
+    },
+    "footer": {
+      "rights": "Tous droits réservés",
+      "pricing": "Tarifs",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "contact": "Contactez-nous"
+    }
+  },
+  "auth": {
+    "back": "Retour",
+    "welcome": "Bon retour",
+    "join": "Créer un compte",
+    "subtext": "Commencez avec notre plateforme",
+    "signIn": "Connectez-vous pour continuer",
+    "browse": "Parcourir les annonces",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "success": "Succès",
+    "signedIn": "Connexion réussie",
+    "signedUp": "Compte créé avec succès",
+    "footerText": "Vous n'avez pas de compte ?",
+    "footerLink": "Inscrivez-vous ici"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue sur votre tableau de bord",
+    "subtitle": "Que souhaitez-vous faire aujourd'hui ?",
+    "actions": {
+      "newListing": "Créer une annonce",
+      "newListingDesc": "Publier une nouvelle annonce immobilière",
+      "myListings": "Mes annonces",
+      "myListingsDesc": "Gérer vos annonces immobilières",
+      "favorites": "Favoris",
+      "favoritesDesc": "Voir vos biens sauvegardés",
+      "browseProperties": "Parcourir",
+      "browsePropertiesDesc": "Rechercher des biens disponibles"
+    },
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "listings": "Annonces",
+      "favorites": "Favoris",
+      "account": "Compte",
+      "settings": "Paramètres",
+      "signOut": "Déconnexion"
+    },
+    "header": {
+      "settings": {
+        "title": "Paramètres",
+        "theme": {
+          "title": "Thème",
+          "light": "Clair",
+          "dark": "Sombre"
+        },
+        "language": {
+          "title": "Langue"
+        },
+        "subscription": {
+          "title": "Abonnement",
+          "currentPlan": "Forfait actuel",
+          "upgradePlan": "Améliorer le forfait",
+          "managePlan": "Gérer l'abonnement"
+        }
+      },
+      "errors": {
+        "portal": {
+          "title": "Erreur",
+          "description": "Impossible d'ouvrir le portail d'abonnement. Veuillez réessayer."
+        }
+      }
+    }
+  },
+  "newListing": {
+    "step": "Étape",
+    "steps": {
+      "basic": {
+        "title": "Informations de base",
+        "description": "Commencez par les détails essentiels"
+      },
+      "location": {
+        "title": "Localisation",
+        "description": "Où se situe votre propriété ?"
+      },
+      "details": {
+        "title": "Détails de la propriété",
+        "description": "Dites-nous en plus sur votre propriété"
+      },
+      "images": {
+        "title": "Photos",
+        "description": "Ajoutez des photos de votre propriété"
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Comment les intéressés peuvent-ils vous joindre ?"
+      }
+    },
+    "fields": {
+      "title": "Titre",
+      "description": "Description",
+      "price": "Prix (€)",
+      "propertyType": "Type de propriété",
+      "listingType": "Type d'annonce",
+      "address": "Adresse",
+      "city": "Ville",
+      "postalCode": "Code Postal",
+      "livingArea": "Surface habitable (m²)",
+      "totalArea": "Surface totale (m²)",
+      "bedrooms": "Chambres",
+      "bathrooms": "Salles de bain",
+      "constructionYear": "Année de construction",
+      "condition": "État",
+      "amenities": "Équipements",
+      "images": "Photos",
+      "contactName": "Nom du contact",
+      "contactPhone": "Numéro de téléphone",
+      "contactEmail": "Adresse e-mail",
+      "preferredContactMethod": "Méthode de contact préférée"
+    },
+    "actions": {
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Soumettre",
+      "submitting": "En cours de soumission..."
+    },
+    "success": {
+      "title": "Succès",
+      "description": "Votre annonce a été créée avec succès !"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "basic": {
+      "title": "Informations de base",
+      "description": "Commencez par les détails essentiels.",
+      "fields": {
+        "title": {
+          "label": "Titre",
+          "placeholder": "Entrez un titre descriptif pour votre annonce"
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Fournissez des informations détaillées sur votre propriété"
+        },
+        "price": {
+          "label": "Prix (€)",
+          "placeholder": "Entrez le prix"
+        },
+        "propertyType": {
+          "label": "Type de propriété",
+          "placeholder": "Sélectionnez un type de propriété",
+          "options": {
+            "apartment": "Appartement",
+            "house": "Maison",
+            "garage_parking": "Garage/Stationnement",
+            "land": "Terrain",
+            "building": "Bâtiment",
+            "business_funds": "Fonds de commerce",
+            "commercial": "Commercial",
+            "shared_room": "Chambre partagée",
+            "office": "Bureau",
+            "business_premises": "Locaux commerciaux",
+            "other": "Autre"
+          }
+        },
+        "listingType": {
+          "label": "Type d'annonce",
+          "placeholder": "Sélectionnez un type d'annonce",
+          "options": {
+            "sale": "Vente",
+            "rent": "Location",
+            "vacation": "Vacances"
+          }
+        }
+      }
+    },
+    "location": {
+      "fields": {
+        "address": {
+          "label": "Adresse",
+          "placeholder": "Recherchez et sélectionnez une adresse...",
+          "loading": "Chargement de Google Maps...",
+          "description": "Sélectionner une adresse garantit des données de géolocalisation précises pour votre propriété. Veuillez choisir une option suggérée dans la liste déroulante."
+        },
+        "city": {
+          "label": "Ville",
+          "placeholder": "Entrez la ville"
+        },
+        "postalCode": {
+          "label": "Code Postal",
+          "placeholder": "Entrez le code postal"
+        }
+      }
+    },
+    "details": {
+      "fields": {
+        "livingArea": {
+          "label": "Surface habitable (m²)",
+          "placeholder": "Entrez la surface habitable"
+        },
+        "totalArea": {
+          "label": "Surface totale (m²)",
+          "placeholder": "Entrez la surface totale"
+        },
+        "bedrooms": {
+          "label": "Chambres",
+          "placeholder": "Entrez le nombre de chambres"
+        },
+        "bathrooms": {
+          "label": "Salles de bain",
+          "placeholder": "Entrez le nombre de salles de bain"
+        },
+        "constructionYear": {
+          "label": "Année de construction",
+          "placeholder": "Entrez l'année de construction"
+        },
+        "condition": {
+          "label": "État",
+          "placeholder": "Sélectionnez l'état de la propriété",
+          "options": {
+            "new": "Neuf",
+            "excellent": "Excellent",
+            "good": "Bon",
+            "to_renovate": "À rénover",
+            "to_rebuild": "À reconstruire"
+          }
+        },
+        "energyClass": {
+          "label": "Classe énergétique",
+          "placeholder": "Sélectionnez une classe énergétique",
+          "options": {
+            "has": "Hors Ancien Système",
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D",
+            "e": "E",
+            "f": "F",
+            "g": "G"
+          }
+        },
+        "ghgEmissionClass": {
+          "label": "Classe d'émission de GES",
+          "placeholder": "Sélectionnez une classe d'émission de GES",
+          "options": {
+            "has": "Hors Ancien Système",
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D",
+            "e": "E",
+            "f": "F",
+            "g": "G"
+          }
+        },
+        "amenities": {
+          "label": "Équipements",
+          "garage": "Garage",
+          "parking": "Parking",
+          "garden": "Jardin",
+          "terrace": "Terrasse",
+          "elevator": "Ascenseur",
+          "pool": "Piscine",
+          "security": "Système de sécurité",
+          "cellar": "Cave",
+          "balcony": "Balcon",
+          "air_conditioning": "Climatisation",
+          "fireplace": "Cheminée",
+          "alarm": "Alarme",
+          "intercom": "Interphone",
+          "digicode": "Digicode",
+          "furnished": "Meublé",
+          "handicap_access": "Accès handicapé"
+        }
+      }
+    },
+    "images": {
+      "title": "Images",
+      "uploadLabel": "Télécharger des images",
+      "dropzone": {
+        "default": "Glissez-déposez ou cliquez pour télécharger (Max {maxFiles} images)",
+        "hint": "Formats acceptés : JPEG, PNG, WebP | Taille max : 25MB"
+      },
+      "preview": {
+        "badge": "{current}/{total}",
+        "delete": "Supprimer l'image",
+        "fileName": "Nom du fichier : {fileName}"
+      }
+    },
+    "contact": {
+      "title": "Informations de contact",
+      "fields": {
+        "contactName": {
+          "label": "Nom du contact",
+          "placeholder": "Entrez votre nom complet"
+        },
+        "contactPhone": {
+          "label": "Numéro de téléphone",
+          "placeholder": "Entrez votre numéro de téléphone"
+        },
+        "contactEmail": {
+          "label": "Adresse e-mail",
+          "placeholder": "Entrez votre adresse e-mail"
+        },
+        "preferredContactMethod": {
+          "label": "Méthode de contact préférée",
+          "placeholder": "Sélectionnez votre méthode de contact préférée",
+          "options": {
+            "phone": "Téléphone",
+            "email": "E-mail",
+            "both": "Les deux"
+          }
+        }
+      }
+    }
+  },
+  "favorites": {
+    "title": "Vos Favoris",
+    "noFavorites": "Aucun Favori pour le Moment",
+    "noFavoritesDesc": "Vous n'avez encore ajouté aucune propriété à vos favoris. Parcourez nos annonces et sauvegardez celles que vous aimez !",
+    "browseListing": "Voir les Annonces",
+    "viewDetails": "Voir les Détails",
+    "bedrooms": "Chambres",
+    "actions": {
+      "removeFavorite": "Retirer des Favoris"
+    }
+  },
+  "listings": {
+    "title": "Annonces",
+    "grid": "Vue en grille",
+    "map": "Vue sur la carte",
+    "searchPlaceholder": "Recherchez des annonces par titre, adresse ou ville...",
+    "loading": "Chargement des annonces...",
+    "noListings": "Aucune annonce trouvée",
+    "noListingsDescription": "Essayez d'ajuster vos filtres ou revenez plus tard pour explorer d'autres propriétés.",
+    "createFirstListing": "Créez votre première annonce",
+    "view": "Voir les détails",
+    "filters": {
+      "title": "Filtres",
+      "results": "résultats",
+      "priceRange": "Fourchette de prix (€)",
+      "min": "Min",
+      "max": "Max",
+      "livingArea": "Surface habitable (m²)",
+      "propertyType": "Type de propriété",
+      "propertyTypes": {
+        "apartment": "Appartement",
+        "house": "Maison",
+        "garage_parking": "Garage/Parking",
+        "land": "Terrain",
+        "building": "Bâtiment",
+        "business_funds": "Fonds de commerce",
+        "commercial": "Locaux commerciaux",
+        "shared_room": "Chambre partagée",
+        "office": "Bureau",
+        "business_premises": "Locaux professionnels",
+        "other": "Autre"
+      },
+      "bedrooms": "Chambres",
+      "bathrooms": "Salles de bain",
+      "listingType": "Type d'annonce",
+      "sale": "À vendre",
+      "rent": "À louer",
+      "vacation": "Locations de vacances",
+      "condition": "État",
+      "conditions": {
+        "new": "Neuf",
+        "excellent": "Excellent",
+        "good": "Bon",
+        "to_renovate": "À rénover",
+        "to_rebuild": "À reconstruire"
+      },
+      "resetFilters": "Réinitialiser les filtres"
+    },
+    "actions": {
+      "favorite": "Favori",
+      "unfavorite": "Retirer des favoris"
+    }
+  },
+  "myListings": {
+    "title": "Mes Annonces",
+    "createNew": "Créer une Nouvelle Annonce",
+    "createFirst": "Créez Votre Première Annonce",
+    "noListings": "Aucune Annonce pour le Moment",
+    "noListingsDescription": "Il semble que vous n'ayez pas encore créé d'annonces. Commencez par créer votre première annonce immobilière !",
+    "status": "Statut",
+    "statuses": {
+      "active": "Actif",
+      "sold": "Vendu",
+      "rented": "Loué",
+      "inactive": "Inactif"
+    },
+    "view": "Voir",
+    "statusUpdated": "Le statut de l'annonce a été mis à jour avec succès.",
+    "statusUpdateError": "Une erreur est survenue lors de la mise à jour du statut. Veuillez réessayer."
+  },
+  "deleteButton": {
+    "confirmation": "Êtes-vous sûr de vouloir supprimer cette annonce ?",
+    "successTitle": "Succès",
+    "successDescription": "L'annonce a été supprimée.",
+    "errorTitle": "Erreur",
+    "errorDescription": "Échec de la suppression de l'annonce."
+  },
+  "listingDetails": {
+    "listingType": {
+      "sale": "À vendre",
+      "rent": "À louer",
+      "vacation": "Location de vacances"
+    },
+    "propertyTypes": {
+      "apartment": "Appartement",
+      "house": "Maison",
+      "garage_parking": "Garage/Stationnement",
+      "land": "Terrain",
+      "building": "Bâtiment",
+      "business_funds": "Fonds de commerce",
+      "commercial": "Locaux commerciaux",
+      "shared_room": "Chambre partagée",
+      "office": "Bureau",
+      "business_premises": "Locaux professionnels",
+      "other": "Autre"
+    },
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de bain",
+    "livingArea": "Surface habitable",
+    "totalArea": "Surface totale",
+    "description": "Description",
+    "amenities": "Équipements",
+    "contact": "Informations de contact",
+    "location": "Localisation",
+    "amenitiesList": {
+      "parking": "Parking",
+      "garden": "Jardin",
+      "terrace": "Terrasse",
+      "elevator": "Ascenseur",
+      "pool": "Piscine",
+      "security": "Sécurité",
+      "cellar": "Cave",
+      "balcony": "Balcon",
+      "garage": "Garage",
+      "air_conditioning": "Climatisation",
+      "fireplace": "Cheminée",
+      "alarm": "Système d'alarme",
+      "intercom": "Interphone",
+      "digicode": "Digicode",
+      "furnished": "Meublé",
+      "handicap_access": "Accès handicapé"
+    },
+    "energy": "Classements énergétiques",
+    "energyClass": {
+      "label": "Classe énergétique",
+      "placeholder": "Sélectionnez une classe énergétique",
+      "options": {
+        "has": "Hors Ancien Système (HAS)",
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E",
+        "f": "F",
+        "g": "G"
+      }
+    },
+    "ghgEmissionClass": {
+      "label": "Classe d'émission de GES",
+      "placeholder": "Sélectionnez une classe d'émission de GES",
+      "options": {
+        "has": "Hors Ancien Système (HAS)",
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E",
+        "f": "F",
+        "g": "G"
+      }
+    }
+  },
+  "shareButton": {
+    "share": "Partager",
+    "copyLink": "Copier le lien",
+    "shareOnFacebook": "Partager sur Facebook",
+    "shareOnTwitter": "Partager sur Twitter",
+    "shareOnWhatsApp": "Partager sur WhatsApp",
+    "shareViaEmail": "Partager par Email",
+    "copied": "Copié dans le presse-papier !",
+    "sharedSuccessfully": "Partagé avec succès !",
+    "failedToCopy": "Échec de la copie dans le presse-papier"
+  },
+  "favoriteButton": {
+    "add": "Ajouté aux favoris",
+    "remove": "Supprimé des favoris",
+    "error": "Une erreur s'est produite",
+    "signInRequired": "Veuillez vous connecter pour ajouter aux favoris"
+  },
+  "pricing": {
+    "title": "Plans de Tarification",
+    "subtitle": "Choisissez le plan qui correspond le mieux à vos besoins. Passez à un plan supérieur à tout moment selon vos exigences.",
+    "back": "Retour au Tableau de Bord",
+    "mostPopular": "Le Plus Populaire",
+    "perMonth": "/mois",
+    "processing": "Traitement en cours...",
+    "tiers": {
+      "free": {
+        "name": "Gratuit",
+        "price": "€0",
+        "description": "Idéal pour découvrir la plateforme avec une seule annonce.",
+        "features": [
+          "Publiez 1 annonce par mois",
+          "Jusqu'à 10 images par annonce",
+          "Visibilité standard dans les recherches"
+        ],
+        "buttonText": "Commencer Gratuitement"
+      },
+      "plus": {
+        "name": "Plus",
+        "price": "€29",
+        "description": "Touchez davantage de locataires avec plusieurs annonces et une visibilité accrue.",
+        "features": [
+          "Publiez jusqu'à 10 annonces par mois",
+          "Jusqu'à 30 images par annonce",
+          "Visibilité prioritaire dans les recherches",
+          "Modifiez le statut des annonces",
+          "Sans engagement, annulez à tout moment"
+        ],
+        "buttonText": "Choisir Plus"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "€49",
+        "description": "Maximisez votre visibilité avec des fonctionnalités de niveau professionnel.",
+        "features": [
+          "Publiez jusqu'à 25 annonces par mois",
+          "Jusqu'à 60 images par annonce",
+          "Modifiez le statut des annonces",
+          "Placement en tête des recherches",
+          "Sans engagement, annulez à tout moment"
+        ],
+        "buttonText": "Choisir Premium"
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "questions": {
+      "q1": "Comment BonjourImmo garantit-il la visibilité de mon bien immobilier?",
+      "q2": "Y a-t-il des frais cachés?",
+      "q3": "Puis-je modifier mon annonce après sa publication?",
+      "q4": "Que se passe-t-il si je dépasse ma limite mensuelle d'annonces?",
+      "q5": "Mes données sont-elles sécurisées sur BonjourImmo?",
+      "q6": "Quels types de biens puis-je publier?",
+      "q7": "Puis-je annuler mon abonnement à tout moment?",
+      "q8": "Comment communiquer avec des acheteurs ou locataires potentiels?",
+      "q9": "Quelle est la différence entre les abonnements Plus et Premium?",
+      "q10": "Les agences peuvent-elles publier des annonces sur BonjourImmo?"
+    },
+    "answers": {
+      "a1": "Nous utilisons un algorithme de recherche basé sur des priorités pour classer les annonces en fonction de leur pertinence et des paramètres de visibilité. Les annonces des plans Plus ou Premium bénéficient d’un meilleur classement dans les résultats de recherche.",
+      "a2": "Aucun frais caché—nos tarifs sont totalement transparents. Contrairement aux agences, nous ne prenons pas de pourcentage sur vos ventes ou locations.",
+      "a3": "Oui, vous pouvez modifier le statut de votre annonce à tout moment en fonction de son type. Si vous souhaitez effectuer d'autres modifications (description, photos ou prix, par exemple), vous pouvez : \n\n1. Changer le statut en 'Inactif' et créer une nouvelle annonce dans votre plan Plus ou Premium.\n2. Contacter notre équipe d'assistance, et nous apporterons les modifications gratuitement pour vous.",
+      "a4": "Vous pouvez passer à un abonnement supérieur pour augmenter votre limite ou attendre le prochain cycle de facturation, lorsque votre limite sera réinitialisée.",
+      "a5": "Oui, nous priorisons la sécurité de vos données grâce à un cryptage de niveau industriel et à des comptes utilisateurs vérifiés.",
+      "a6": "Vous pouvez publier tout type de bien, y compris des appartements, maisons, terrains et locations de vacances, pour la vente, la location ou les séjours de courte durée.",
+      "a7": "Bien sûr ! Nos abonnements sont flexibles, sans engagement à long terme. Vous pouvez annuler ou modifier votre abonnement à tout moment.",
+      "a8": "Nous ne fournissons pas de système de messagerie intégré. Pour garantir que les acheteurs ou locataires intéressés puissent vous contacter, nous vous recommandons d’ajouter vos meilleures informations de contact (par exemple, numéro de téléphone ou email) lors de la création de votre annonce.",
+      "a9": "Le plan Plus offre 10 annonces/mois avec une visibilité prioritaire dans les recherches, tandis que le plan Premium offre 25 annonces/mois, un placement en tête et des modifications illimitées.",
+      "a10": "BonjourImmo est exclusivement dédié aux propriétaires particuliers, offrant une plateforme sans commission pour des transactions directes."
+    }
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "home": {
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "nav": {
+      "pricing": "Pricing",
+      "signIn": "Sign In",
+      "browse": "Browse"
+    },
+    "hero": {
+      "new": "Introducing a new way to sell and rent in France",
+      "title": "Revolutionizing Private Real Estate",
+      "subtitle": "A cutting-edge platform empowering homeowners to sell, rent, or list vacation properties directly—zero commissions, effortless posting, and designed to be the #1 alternative to traditional real estate agencies.",
+      "cta": {
+        "primary": "List Your Property",
+        "secondary": "Discover More"
+      }
+    },
+    "benefits": {
+      "title": "Why Choose Us?",
+      "commission": {
+        "title": "No Hidden Costs",
+        "description": "Transparent, flat-rate pricing with zero commissions—ever."
+      },
+      "direct": {
+        "title": "Total Control",
+        "description": "You’re in charge—manage listings and connect directly with buyers or renters."
+      },
+      "control": {
+        "title": "Next-Gen Tools",
+        "description": "Showcase your property with modern design, more photos, and seamless navigation."
+      },
+      "secure": {
+        "title": "Secure & Trusted",
+        "description": "A verified platform with reliable users and responsive customer support."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Create Your Listing",
+        "description": "Add high-quality photos, property details, and a compelling description."
+      },
+      "step2": {
+        "title": "Connect With Buyers or Renters",
+        "description": "Receive inquiries directly and manage communication on your terms."
+      },
+      "step3": {
+        "title": "Close Deals Your Way",
+        "description": "Finalize sales or rentals without intermediaries or unexpected fees."
+      }
+    },
+    "transparency": {
+      "title": "Why Choose BonjourImmo Over Traditional Agencies?",
+      "bonjourImmo": {
+        "title": "Why BonjourImmo?",
+        "noCommission": "Zero commission fees, saving you thousands.",
+        "directControl": "Direct control over your listings and communications.",
+        "streamlinedPosting": "Streamlined and effortless property posting.",
+        "effortlessManagement": "Manage everything in one simple dashboard.",
+        "affordability": "Affordable plans designed for private landlords."
+      },
+      "agencies": {
+        "title": "Why Not Traditional Agencies?",
+        "highCommission": "High commission rates that reduce your profit.",
+        "lackOfControl": "Limited control over your property listing and communication.",
+        "delays": "Delays caused by intermediaries and unnecessary steps.",
+        "hiddenFees": "Hidden fees that can surprise you later.",
+        "limitedTransparency": "Lack of transparency in processes and costs."
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "pricing": "Pricing",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact Us"
+    }
+  },
+  "auth": {
+    "back": "Back",
+    "welcome": "Welcome back",
+    "join": "Create your account",
+    "subtext": "Get started with our platform",
+    "signIn": "Sign in to continue",
+    "browse": "Browse listings",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success",
+    "signedIn": "Successfully signed in",
+    "signedUp": "Account created successfully",
+    "footerText": "Don't have an account?",
+    "footerLink": "Sign up here"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "subtitle": "What would you like to do today?",
+    "actions": {
+      "newListing": "Create Listing",
+      "newListingDesc": "Post a new property listing",
+      "myListings": "My Listings",
+      "myListingsDesc": "Manage your property listings",
+      "favorites": "Favorites",
+      "favoritesDesc": "View your saved properties",
+      "browseProperties": "Browse Properties",
+      "browsePropertiesDesc": "Search available properties"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "listings": "Listings",
+      "favorites": "Favorites",
+      "account": "Account",
+      "settings": "Settings",
+      "signOut": "Sign Out"
+    },
+    "header": {
+      "settings": {
+        "title": "Settings",
+        "theme": {
+          "title": "Theme",
+          "light": "Light",
+          "dark": "Dark"
+        },
+        "language": {
+          "title": "Language"
+        },
+        "subscription": {
+          "title": "Subscription",
+          "currentPlan": "Current Plan",
+          "upgradePlan": "Upgrade Plan",
+          "managePlan": "Manage Plan"
+        }
+      },
+      "errors": {
+        "portal": {
+          "title": "Error",
+          "description": "Could not open subscription portal. Please try again."
+        }
+      }
+    }
+  },
+  "newListing": {
+    "step": "Step",
+    "steps": {
+      "basic": {
+        "title": "Basic Information",
+        "description": "Start with the essential details"
+      },
+      "location": {
+        "title": "Location",
+        "description": "Where is your property located?"
+      },
+      "details": {
+        "title": "Property Details",
+        "description": "Tell us more about your property"
+      },
+      "images": {
+        "title": "Images",
+        "description": "Add photos of your property"
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "How should interested parties reach you?"
+      }
+    },
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "price": "Price (€)",
+      "propertyType": "Property Type",
+      "listingType": "Listing Type",
+      "address": "Address",
+      "city": "City",
+      "postalCode": "Postal Code",
+      "livingArea": "Living Area (m²)",
+      "totalArea": "Total Area (m²)",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "constructionYear": "Year of Construction",
+      "condition": "Condition",
+      "amenities": "Amenities",
+      "images": "Images",
+      "contactName": "Contact Name",
+      "contactPhone": "Phone Number",
+      "contactEmail": "Email Address",
+      "preferredContactMethod": "Preferred Contact Method"
+    },
+    "actions": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "title": "Success",
+      "description": "Your listing has been created successfully!"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Something went wrong. Please try again."
+    },
+    "basic": {
+      "title": "Basic Information",
+      "description": "Start with the essential details.",
+      "fields": {
+        "title": {
+          "label": "Title",
+          "placeholder": "Enter a descriptive title for your listing"
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Provide detailed information about your property"
+        },
+        "price": {
+          "label": "Price (€)",
+          "placeholder": "Enter the price"
+        },
+        "propertyType": {
+          "label": "Property Type",
+          "placeholder": "Select a property type",
+          "options": {
+            "apartment": "Apartment",
+            "house": "House",
+            "garage_parking": "Garage/Parking",
+            "land": "Land",
+            "building": "Building",
+            "business_funds": "Business Funds",
+            "commercial": "Commercial",
+            "shared_room": "Shared Room",
+            "office": "Office",
+            "business_premises": "Business Premises",
+            "other": "Other"
+          }
+        },
+        "listingType": {
+          "label": "Listing Type",
+          "placeholder": "Select a listing type",
+          "options": {
+            "sale": "Sale",
+            "rent": "Rent",
+            "vacation": "Vacation"
+          }
+        }
+      }
+    },
+    "location": {
+      "fields": {
+        "address": {
+          "label": "Address",
+          "placeholder": "Search and select an address...",
+          "loading": "Loading Google Maps...",
+          "description": "Selecting an address ensures accurate geolocation data for your property. Please choose a suggested option from the dropdown."
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "Enter the city"
+        },
+        "postalCode": {
+          "label": "Postal Code",
+          "placeholder": "Enter the postal code"
+        }
+      }
+    },
+    "details": {
+      "fields": {
+        "livingArea": {
+          "label": "Living Area (m²)",
+          "placeholder": "Enter the living area"
+        },
+        "totalArea": {
+          "label": "Total Area (m²)",
+          "placeholder": "Enter the total area"
+        },
+        "bedrooms": {
+          "label": "Bedrooms",
+          "placeholder": "Enter the number of bedrooms"
+        },
+        "bathrooms": {
+          "label": "Bathrooms",
+          "placeholder": "Enter the number of bathrooms"
+        },
+        "constructionYear": {
+          "label": "Year of Construction",
+          "placeholder": "Enter the year of construction"
+        },
+        "condition": {
+          "label": "Condition",
+          "placeholder": "Select the property's condition",
+          "options": {
+            "new": "New",
+            "excellent": "Excellent",
+            "good": "Good",
+            "to_renovate": "To Renovate",
+            "to_rebuild": "To Rebuild"
+          }
+        },
+        "energyClass": {
+          "label": "Energy Class",
+          "placeholder": "Select Energy Class",
+          "options": {
+            "has": "Hors Ancien Système",
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D",
+            "e": "E",
+            "f": "F",
+            "g": "G"
+          }
+        },
+        "ghgEmissionClass": {
+          "label": "GHG Emission Class",
+          "placeholder": "Select GHG Emission Class",
+          "options": {
+            "has": "Hors Ancien Système",
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D",
+            "e": "E",
+            "f": "F",
+            "g": "G"
+          }
+        },
+        "amenities": {
+          "label": "Amenities",
+          "garage": "Garage",
+          "parking": "Parking",
+          "garden": "Garden",
+          "terrace": "Terrace",
+          "elevator": "Elevator",
+          "pool": "Swimming Pool",
+          "security": "Security System",
+          "cellar": "Cellar",
+          "balcony": "Balcony",
+          "air_conditioning": "Air Conditioning",
+          "fireplace": "Fireplace",
+          "alarm": "Alarm System",
+          "intercom": "Intercom",
+          "digicode": "Digicode",
+          "furnished": "Furnished",
+          "handicap_access": "Handicap Access"
+        }
+      }
+    },
+    "images": {
+      "title": "Images",
+      "uploadLabel": "Upload Images",
+      "dropzone": {
+        "default": "Drag & drop or click to upload (Max {maxFiles} images)",
+        "hint": "Accepted formats: JPEG, PNG, WebP | Max size: 25MB"
+      },
+      "preview": {
+        "badge": "{current}/{total}",
+        "delete": "Delete Image",
+        "fileName": "Filename: {fileName}"
+      }
+    },
+    "contact": {
+      "title": "Contact Information",
+      "fields": {
+        "contactName": {
+          "label": "Contact Name",
+          "placeholder": "Enter your full name"
+        },
+        "contactPhone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "contactEmail": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "preferredContactMethod": {
+          "label": "Preferred Contact Method",
+          "placeholder": "Select your preferred contact method",
+          "options": {
+            "phone": "Phone",
+            "email": "Email",
+            "both": "Both"
+          }
+        }
+      }
+    }
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "noFavorites": "No Favorites Yet",
+    "noFavoritesDesc": "You haven’t added any properties to your favorites yet. Browse our listings and save the ones you love!",
+    "browseListing": "Browse Listings",
+    "viewDetails": "View Details",
+    "bedrooms": "Bedrooms",
+    "actions": {
+      "removeFavorite": "Remove from Favorites"
+    }
+  },
+  "listings": {
+    "title": "Listings",
+    "grid": "Grid View",
+    "map": "Map View",
+    "searchPlaceholder": "Search for listings by title, address, or city...",
+    "loading": "Loading listings...",
+    "noListings": "No Listings Found",
+    "noListingsDescription": "Try adjusting your filters or come back later to explore more properties.",
+    "createFirstListing": "Create Your First Listing",
+    "view": "View Details",
+    "filters": {
+      "title": "Filters",
+      "results": "results",
+      "priceRange": "Price Range (€)",
+      "min": "Min",
+      "max": "Max",
+      "livingArea": "Living Area (m²)",
+      "propertyType": "Property Type",
+      "propertyTypes": {
+        "apartment": "Apartment",
+        "house": "House",
+        "garage_parking": "Garage/Parking",
+        "land": "Land",
+        "building": "Building",
+        "business_funds": "Business Funds",
+        "commercial": "Commercial Premises",
+        "shared_room": "Shared Room",
+        "office": "Office",
+        "business_premises": "Business Premises",
+        "other": "Other"
+      },
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "listingType": "Listing Type",
+      "sale": "For Sale",
+      "rent": "For Rent",
+      "vacation": "Vacation Rentals",
+      "condition": "Condition",
+      "conditions": {
+        "new": "New",
+        "excellent": "Excellent",
+        "good": "Good",
+        "to_renovate": "To Renovate",
+        "to_rebuild": "To Rebuild"
+      },
+      "resetFilters": "Reset Filters"
+    },
+    "actions": {
+      "favorite": "Favorite",
+      "unfavorite": "Unfavorite"
+    }
+  },
+  "myListings": {
+    "title": "My Listings",
+    "createNew": "Create New Listing",
+    "createFirst": "Create Your First Listing",
+    "noListings": "No Listings Yet",
+    "noListingsDescription": "It looks like you haven't created any listings yet. Start by creating your first property listing!",
+    "status": "Status",
+    "statuses": {
+      "active": "Active",
+      "sold": "Sold",
+      "rented": "Rented",
+      "inactive": "Inactive"
+    },
+    "view": "View",
+    "statusUpdated": "Listing status updated successfully.",
+    "statusUpdateError": "An error occurred while updating the status. Please try again."
+  },
+  "deleteButton": {
+    "confirmation": "Are you sure you want to delete this listing?",
+    "successTitle": "Success",
+    "successDescription": "Listing has been deleted.",
+    "errorTitle": "Error",
+    "errorDescription": "Failed to delete listing."
+  },
+  "listingDetails": {
+    "listingType": {
+      "sale": "For Sale",
+      "rent": "For Rent",
+      "vacation": "Vacation Rental"
+    },
+    "propertyTypes": {
+      "apartment": "Apartment",
+      "house": "House",
+      "garage_parking": "Garage/Parking",
+      "land": "Land",
+      "building": "Building",
+      "business_funds": "Business Funds",
+      "commercial": "Commercial Premises",
+      "shared_room": "Shared Room",
+      "office": "Office",
+      "business_premises": "Business Premises",
+      "other": "Other"
+    },
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "livingArea": "Living Area",
+    "totalArea": "Total Area",
+    "description": "Description",
+    "amenities": "Amenities",
+    "contact": "Contact Information",
+    "location": "Location",
+    "amenitiesList": {
+      "parking": "Parking",
+      "garden": "Garden",
+      "terrace": "Terrace",
+      "elevator": "Elevator",
+      "pool": "Swimming Pool",
+      "security": "Security System",
+      "cellar": "Cellar",
+      "balcony": "Balcony",
+      "garage": "Garage",
+      "air_conditioning": "Air Conditioning",
+      "fireplace": "Fireplace",
+      "alarm": "Alarm",
+      "intercom": "Intercom",
+      "digicode": "Digicode",
+      "furnished": "Furnished",
+      "handicap_access": "Handicap Accessible"
+    },
+    "energy": "Energy Ratings",
+    "energyClass": {
+      "label": "Energy Class",
+      "placeholder": "Select energy class",
+      "options": {
+        "has": "Hors Ancien Système (HAS)",
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E",
+        "f": "F",
+        "g": "G"
+      }
+    },
+    "ghgEmissionClass": {
+      "label": "GHG Emission Class",
+      "placeholder": "Select GHG emission class",
+      "options": {
+        "has": "Hors Ancien Système (HAS)",
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E",
+        "f": "F",
+        "g": "G"
+      }
+    }
+  },
+  "shareButton": {
+    "share": "Share",
+    "copyLink": "Copy Link",
+    "shareOnFacebook": "Share on Facebook",
+    "shareOnTwitter": "Share on Twitter",
+    "shareOnWhatsApp": "Share on WhatsApp",
+    "shareViaEmail": "Share via Email",
+    "copied": "Copied to clipboard!",
+    "sharedSuccessfully": "Shared successfully!",
+    "failedToCopy": "Failed to copy to clipboard"
+  },
+  "favoriteButton": {
+    "add": "Added to favorites",
+    "remove": "Removed from favorites",
+    "error": "Something went wrong",
+    "signInRequired": "Please sign in to add to favorites"
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "subtitle": "Choose the best plan for your needs. Upgrade anytime as your requirements grow.",
+    "back": "Back to Dashboard",
+    "mostPopular": "Most Popular",
+    "perMonth": "/mo",
+    "processing": "Processing...",
+    "tiers": {
+      "free": {
+        "name": "Free",
+        "price": "€0",
+        "description": "Ideal for trying out the platform with a single listing.",
+        "features": [
+          "Post 1 listing per month",
+          "Up to 10 images per listing",
+          "Standard search visibility"
+        ],
+        "buttonText": "Start for Free"
+      },
+      "plus": {
+        "name": "Plus",
+        "price": "€29",
+        "description": "Reach more tenants with multiple listings and enhanced visibility.",
+        "features": [
+          "Post up to 10 listings per month",
+          "Up to 30 images per listing",
+          "Priority search visibility",
+          "Modify status of listings",
+          "No long term commitments, cancel anytime"
+        ],
+        "buttonText": "Choose Plus"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "€49",
+        "description": "Get maximum exposure and professional-grade features.",
+        "features": [
+          "Post up to 25 listings per month",
+          "Up to 60 images per listing",
+          "Modify status of listings",
+          "Top search placement",
+          "No long term commitments, cancel anytime"
+        ],
+        "buttonText": "Choose Premium"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "q1": "How does BonjourImmo ensure my property gets seen?",
+      "q2": "Are there any hidden fees?",
+      "q3": "Can I modify my listing after posting?",
+      "q4": "What happens if I exceed my monthly listing limit?",
+      "q5": "Is my data secure on BonjourImmo?",
+      "q6": "What types of properties can I list?",
+      "q7": "Can I cancel my subscription anytime?",
+      "q8": "How do I communicate with potential buyers or renters?",
+      "q9": "What’s the difference between the Plus and Premium plans?",
+      "q10": "Can agencies list properties on BonjourImmo?"
+    },
+    "answers": {
+      "a1": "We use a priority-based search algorithm to rank listings based on their relevance and visibility settings. Listings in the Plus or Premium plans enjoy higher placement in search results.",
+      "a2": "No hidden fees—our pricing is fully transparent. Unlike agencies, we do not take a percentage of your sale or rent.",
+      "a3": "Yes, you can modify your listing's status anytime based on its type. If you want to make additional changes to your listing (e.g., description, images, or price), you can: \n\n1. Change the status to 'Inactive' and create a new listing under your Plus or Premium plan.\n2. Contact our support team, and we will handle the changes for you free of charge.",
+      "a4": "You can upgrade your plan to increase your limit or wait until the next billing cycle when your limit resets.",
+      "a5": "Yes, we prioritize your data security with industry-standard encryption and verified user accounts.",
+      "a6": "You can list any property type, including apartments, houses, land, and vacation rentals, for sale, rent, or short-term stays.",
+      "a7": "Absolutely! Our plans are flexible with no long-term commitments. You can cancel or change your plan anytime.",
+      "a8": "We do not provide an in-app messaging system. To ensure interested buyers or renters can contact you, we recommend providing your best contact information (e.g., phone number or email) when creating your listing.",
+      "a9": "The Plus plan offers 10 listings/month and priority search visibility, while Premium provides 25 listings/month, top placement, and unlimited modifications.",
+      "a10": "BonjourImmo is dedicated exclusively to private landlords, providing a commission-free platform for direct transactions."
+    }
+  }
+}
