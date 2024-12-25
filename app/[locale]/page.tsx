@@ -47,7 +47,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Container with Background */}
-      <div className="bg-hero bg-cover bg-center min-h-screen">
+      <div className="bg-hero bg-cover bg-center min-h-screen saturate-[1.5]">
         {/* Navigation */}
         <motion.nav
           initial={{ opacity: 0, y: -20 }}
@@ -127,7 +127,7 @@ const HomePage = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link href="/sign-in">
-                <Button size="lg">
+                <Button size="lg" variant="secondary">
                   {t("hero.cta.primary")} <ArrowRight />
                 </Button>
               </Link>
