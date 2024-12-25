@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ArrowLeft, Check, Star, Loader2 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
 import { useState } from "react";
@@ -36,6 +36,7 @@ const PricingPage = () => {
   const router = useRouter();
   const { userId } = useAuth(); // Fetch user authentication state
   const [loading, setLoading] = useState<string | null>(null);
+  const locale = useLocale();
 
   const handleSubscribe = async (plan: string) => {
     if (!userId) {
@@ -51,7 +52,7 @@ const PricingPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan, locale }),
       });
 
       if (!response.ok) {

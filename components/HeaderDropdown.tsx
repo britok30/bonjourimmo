@@ -37,6 +37,7 @@ export function HeaderDropdown({ userPlan }: HeaderDropdownProps) {
       setPortalLoading(true);
       const response = await fetch("/api/billing-portal", {
         method: "POST",
+        body: JSON.stringify({ locale }),
       });
 
       if (!response.ok) {

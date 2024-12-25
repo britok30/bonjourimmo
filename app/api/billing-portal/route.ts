@@ -11,6 +11,7 @@ const url = inDevEnvironment
 export async function POST(req: Request) {
   try {
     const { userId } = await auth();
+    const { locale } = await req.json();
 
     if (!userId) {
       return new NextResponse("unauthorized", { status: 401 });
@@ -26,6 +27,7 @@ export async function POST(req: Request) {
     const stripeSession = await stripe.billingPortal.sessions.create({
       customer: userSubscription?.stripeCustomerId,
       return_url: `${url}/dashboard`,
+      locale: locale,
     });
 
     return NextResponse.json({ url: stripeSession.url });

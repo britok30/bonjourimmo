@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     }
 
     // Get plan from request
-    const { plan } = await req.json();
+    const { plan, locale } = await req.json();
     const planConfig = STRIPE_PLANS[plan as keyof typeof STRIPE_PLANS];
 
     if (!planConfig) {
@@ -33,6 +33,7 @@ export async function POST(req: Request) {
       mode: "subscription",
       billing_address_collection: "auto",
       customer_email: user.emailAddresses[0].emailAddress,
+      locale: locale,
       line_items: [
         {
           price: planConfig.price_id[inDevEnvironment ? "test" : "production"],
