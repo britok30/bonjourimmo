@@ -19,7 +19,7 @@ export const STRIPE_PLANS: Record<string, StripePlan> = {
     name: "Plus",
     price_id: {
       test: "price_1QZMjWGsQpX8AIfwHN4Khted",
-      production: "",
+      production: "price_1QZjOMGsQpX8AIfwaSXOndIv",
     },
     listingsPerMonth: 10,
     maxPhotos: 30,
@@ -32,7 +32,7 @@ export const STRIPE_PLANS: Record<string, StripePlan> = {
     name: "Premium",
     price_id: {
       test: "price_1QZMmHGsQpX8AIfwUwjhMyft",
-      production: "",
+      production: "price_1QZjOOGsQpX8AIfwYOM9mYzv",
     },
     listingsPerMonth: 25,
     maxPhotos: 60,
