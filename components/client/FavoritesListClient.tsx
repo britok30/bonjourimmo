@@ -102,8 +102,12 @@ export default function FavoritesListClient({
                       </p>
                       <div className="flex items-center gap-4 mt-2">
                         <p className="text-primary font-semibold flex items-center gap-1">
-                          <Euro className="h-4 w-4" />
-                          {Number(listing.price).toLocaleString()}
+                          {Number(listing.price).toLocaleString("fr-FR", {
+                            style: "currency",
+                            currency: "EUR",
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 2,
+                          })}
                         </p>
                         <span className="text-muted-foreground">•</span>
                         <p className="text-muted-foreground">

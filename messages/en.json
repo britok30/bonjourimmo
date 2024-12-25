@@ -184,7 +184,7 @@
       "condition": "Condition",
       "amenities": "Amenities",
       "images": "Images",
-      "contactName": "Contact Name",
+      "contactName": "Contact Name (Write 'Owner' if you want to remain anonymous)",
       "contactPhone": "Phone Number",
       "contactEmail": "Email Address",
       "preferredContactMethod": "Preferred Contact Method"

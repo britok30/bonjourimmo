@@ -232,7 +232,12 @@ export default function ListingsClient({
                     </p>
                     <div className="flex justify-between items-center mt-4">
                       <span className="font-bold">
-                        €{Number(listing.price).toLocaleString()}
+                        {Number(listing.price).toLocaleString("fr-FR", {
+                          style: "currency",
+                          currency: "EUR",
+                          minimumFractionDigits: 0,
+                          maximumFractionDigits: 2,
+                        })}
                       </span>
                       <Button variant="outline" asChild>
                         <Link href={`/listings/${listing.slug}`}>

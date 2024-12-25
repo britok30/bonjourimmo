@@ -155,13 +155,11 @@ export const newListingSchema = z
       .string()
       .min(2, "Le nom doit comporter au moins 2 caractères")
       .max(100, "Le nom ne peut pas dépasser 100 caractères")
-      .refine(
-        (value) => /^[a-zA-Z\s-]+$/.test(value),
-        "Le nom ne peut contenir que des lettres, des espaces et des tirets"
-      ),
+      .trim(),
     contactPhone: z
       .string()
       .max(15, "Le numéro de téléphone est trop long")
+      .trim()
       .optional()
       .nullable()
       .refine((val) => {

@@ -184,7 +184,7 @@
       "condition": "État",
       "amenities": "Équipements",
       "images": "Photos",
-      "contactName": "Nom du contact",
+      "contactName": "Nom du contact (Écrivez 'Propriétaire' si vous souhaitez rester anonyme)",
       "contactPhone": "Numéro de téléphone",
       "contactEmail": "Adresse e-mail",
       "preferredContactMethod": "Méthode de contact préférée"

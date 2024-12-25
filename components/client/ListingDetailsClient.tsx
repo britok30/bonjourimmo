@@ -168,8 +168,12 @@ export default function ListingDetailsClient({
               </div>
               <h1 className="text-3xl font-bold mb-2">{listing.title}</h1>
               <p className="text-2xl font-semibold text-primary flex items-center gap-1">
-                <Euro className="h-5 w-5" />
-                {Number(listing.price).toLocaleString()}
+                {Number(listing.price).toLocaleString("fr-FR", {
+                  style: "currency",
+                  currency: "EUR",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2,
+                })}
               </p>
               <div className="flex items-center text-muted-foreground mt-2">
                 <MapPin className="h-4 w-4 mr-2" />

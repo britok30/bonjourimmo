@@ -40,9 +40,9 @@ const ListingsMap: React.FC<ListingsMapProps> = ({ listings }) => {
     const locationGroups: { [key: string]: Listing[] } = {};
 
     listings.forEach((listing) => {
-      const key = `${Number(listing.latitude).toFixed(6)}-${Number(listing.longitude).toFixed(
-        6
-      )}`;
+      const key = `${Number(listing.latitude).toFixed(6)}-${Number(
+        listing.longitude
+      ).toFixed(6)}`;
       if (!locationGroups[key]) {
         locationGroups[key] = [];
       }
@@ -104,7 +104,12 @@ const ListingsMap: React.FC<ListingsMapProps> = ({ listings }) => {
               }}
             >
               <div className="bg-primary text-primary-foreground px-2 py-1 rounded-lg shadow-lg font-semibold hover:scale-105 transition-transform">
-                €{Math.floor(Number(listing.price)).toLocaleString()}
+                {Math.floor(Number(listing.price)).toLocaleString("fr-FR", {
+                  style: "currency",
+                  currency: "EUR",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 2,
+                })}
               </div>
             </div>
           </Marker>
@@ -162,8 +167,12 @@ const ListingsMap: React.FC<ListingsMapProps> = ({ listings }) => {
                 </p>
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1 font-semibold">
-                    <Euro className="h-4 w-4" />
-                    {Number(selectedListing.price).toLocaleString()}
+                    {Number(selectedListing.price).toLocaleString("fr-FR", {
+                      style: "currency",
+                      currency: "EUR",
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 2,
+                    })}
                   </div>
                   <Button asChild size="sm">
                     <Link href={`/listings/${selectedListing.slug}`}>
