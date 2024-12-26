@@ -75,7 +75,7 @@ export const generateMetadata = async ({
       type: "website",
       title: selectedContent.title as string,
       description: selectedContent.description as string,
-      url: "https://bonjourimmo.com",
+      url: "https://www.bonjourimmo.com",
       images: [
         {
           url: "/main.jpg",
