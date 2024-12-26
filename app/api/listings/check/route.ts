@@ -14,7 +14,7 @@ const redis = new Redis({
 const rateLimiters = {
   free: new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(inDevEnvironment ? 10000 : 1, "365 d"), // 1 listing
+    limiter: Ratelimit.slidingWindow(inDevEnvironment ? 10000 : 1, "30 d"), // 1 listing
     prefix: "@upstash/ratelimit/free",
   }),
   plus: new Ratelimit({
