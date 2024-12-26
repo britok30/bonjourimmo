@@ -8,6 +8,7 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import GoogleTag from "@/components/GoogleTag";
 // import GoogleTag from "@/components/GoogleTag";
 
 const eudoxusSans = localFont({
@@ -121,7 +122,7 @@ export default async function RootLayout({
       <html lang={locale} suppressHydrationWarning>
         <body className={`${eudoxusSans.className} antialiased`}>
           <Analytics />
-          {/* <GoogleTag /> */}
+          <GoogleTag />
 
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider
