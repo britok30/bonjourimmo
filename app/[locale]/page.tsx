@@ -18,6 +18,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import HomeNav from "@/components/HomeNav";
+import { Badge } from "@/components/ui/badge";
 
 const HomePage = () => {
   const t = useTranslations("home");
@@ -59,14 +60,17 @@ const HomePage = () => {
           className="container mx-auto px-4 py-24 md:py-32"
         >
           <div className="text-center max-w-3xl mx-auto">
-            <motion.h2
+            <Badge variant="secondary" className="mb-4 text-base font-light">
+              🚀 Nouveau lancement
+            </Badge>
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white"
             >
               {t("hero.title")}
-            </motion.h2>
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
