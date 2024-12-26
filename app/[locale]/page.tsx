@@ -114,7 +114,7 @@ const HomePage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="text-white h-[50vh] bg-how bg-cover bg-center py-16 relative">
+      <section className="text-white min-h-[50vh] bg-how bg-cover bg-center py-16 relative">
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
