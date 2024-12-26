@@ -262,6 +262,8 @@ export default function CreateListingClient({
         description: t("success.description"),
       });
 
+      leadFormEvent();
+
       router.push("/dashboard");
     } catch (error) {
       toast({
@@ -272,6 +274,15 @@ export default function CreateListingClient({
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const leadFormEvent = () => {
+    // @ts-expect-error gtag is defined in the global scope
+    window.gtag("event", "conversion", {
+      send_to: "AW-16763653327/CSkSCNezv_wZEM-ZxLk-",
+      value: 1.0,
+      currency: "USD",
+    });
   };
 
   return (
