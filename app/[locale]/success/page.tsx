@@ -41,7 +41,7 @@ const SuccessPage = () => {
   }, [type]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="min-h-screen bg-success bg-cover flex items-center justify-center bg-background text-white">
       <main className="container mx-auto px-4 w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -51,7 +51,11 @@ const SuccessPage = () => {
         >
           <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
           <p className="text-lg mb-8">{t("description")}</p>
-          <Button size="lg" onClick={() => router.push("/dashboard")}>
+          <Button
+            size="lg"
+            onClick={() => router.push("/dashboard")}
+            variant="secondary"
+          >
             {t("button")}
           </Button>
         </motion.div>
