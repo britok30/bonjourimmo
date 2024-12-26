@@ -388,6 +388,13 @@
           }
         }
       }
+    },
+    "errors": {
+      "rateLimit": {
+        "title": "Limite atteinte",
+        "description": "Vous avez atteint la limite de vos crédits mensuels. Veuillez mettre à niveau votre abonnement pour continuer à publier des annonces.",
+        "action": "Voir les abonnements"
+      }
     }
   },
   "favorites": {

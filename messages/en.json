@@ -388,6 +388,13 @@
           }
         }
       }
+    },
+    "errors": {
+      "rateLimit": {
+        "title": "Limit Reached",
+        "description": "You have reached your monthly credit limit. Please upgrade your subscription to continue posting listings.",
+        "action": "View Plans"
+      }
     }
   },
   "favorites": {
