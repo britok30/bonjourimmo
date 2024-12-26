@@ -649,5 +649,10 @@
       "a9": "Le plan Plus offre 10 annonces/mois avec une visibilité prioritaire dans les recherches, tandis que le plan Premium offre 25 annonces/mois, un placement en tête et des modifications illimitées.",
       "a10": "BonjourImmo est exclusivement dédié aux propriétaires particuliers, offrant une plateforme sans commission pour des transactions directes."
     }
+  },
+  "success": {
+    "title": "Merci pour votre achat !",
+    "description": "Votre abonnement a été activé avec succès. Profitez de tous les avantages de votre plan BonjourImmo.",
+    "button": "Accéder au tableau de bord"
   }
 }

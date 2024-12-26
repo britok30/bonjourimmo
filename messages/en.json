@@ -649,5 +649,10 @@
       "a9": "The Plus plan offers 10 listings/month and priority search visibility, while Premium provides 25 listings/month, top placement, and unlimited modifications.",
       "a10": "BonjourImmo is dedicated exclusively to private landlords, providing a commission-free platform for direct transactions."
     }
+  },
+  "success": {
+    "title": "Thank You for Your Purchase!",
+    "description": "Your subscription has been successfully activated. Enjoy all the benefits of your BonjourImmo plan.",
+    "button": "Go to Dashboard"
   }
 }
