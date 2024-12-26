@@ -24,7 +24,7 @@ export default function HomeNav() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
           <motion.h1
-            className="text-2xl font-bold tracking-tighter text-white relative"
+            className="text-xl lg:text-2xl font-bold tracking-tighter text-white relative"
             whileHover={{ scale: 1.02 }}
           >
             BonjourImmo
