@@ -33,7 +33,7 @@ const SuccessPage = () => {
     const value = valueMap[type];
     // @ts-expect-error gtag is defined in the global scope
     window.gtag("event", "conversion", {
-      send_to: "AW-11405036790/E6OgCM24oPkZEPaZrL4q",
+      send_to: "AW-16763653327/z1L3CLPJn_wZEM-ZxLk-",
       value: value,
       currency: "EUR",
       transaction_id: "",
