@@ -69,6 +69,7 @@ const DetailsStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
             <FormControl>
               <Input
                 type="number"
+                min="0"
                 step="any"
                 placeholder={t("livingArea.placeholder")}
                 {...field}
@@ -91,6 +92,7 @@ const DetailsStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
             <FormControl>
               <Input
                 type="number"
+                min="0"
                 step="any"
                 placeholder={t("totalArea.placeholder")}
                 {...field}
@@ -113,6 +115,7 @@ const DetailsStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
             <FormControl>
               <Input
                 type="number"
+                min="0"
                 placeholder={t("bedrooms.placeholder")}
                 {...field}
                 value={field.value ?? undefined}
@@ -134,6 +137,7 @@ const DetailsStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
             <FormControl>
               <Input
                 type="number"
+                min="0"
                 placeholder={t("bathrooms.placeholder")}
                 {...field}
                 value={field.value ?? undefined}
@@ -155,6 +159,7 @@ const DetailsStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
             <FormControl>
               <Input
                 type="number"
+                min="0"
                 placeholder={t("constructionYear.placeholder")}
                 {...field}
                 value={

@@ -88,9 +88,23 @@ const BasicInformationStep = ({
             <FormControl>
               <Input
                 type="number"
+                step="1" // Ensures the number input only increments in whole numbers
+                min="0" // Prevents negative values in the input field
                 placeholder={t("price.placeholder")}
                 {...field}
-                onWheel={(e) => e.currentTarget.blur()}
+                value={field.value || ""} // Set field value or default to an empty string
+                onChange={(e) => {
+                  // Allow only numeric values and strip any decimals or commas
+                  const sanitizedValue = e.target.value.replace(/[.,]/g, "");
+                  field.onChange(
+                    sanitizedValue ? parseInt(sanitizedValue, 10) : ""
+                  );
+                }}
+                onBlur={(e) => {
+                  field.onBlur();
+                  form.trigger("price"); // Trigger validation on blur
+                }}
+                onWheel={(e) => e.currentTarget.blur()} // Prevent accidental scrolling of input values
               />
             </FormControl>
             <FormMessage />

@@ -8,6 +8,7 @@ import {
   timestamp,
   json,
   pgEnum,
+  doublePrecision
 } from "drizzle-orm/pg-core";
 
 export const subscriptionPlanEnum = pgEnum("subscription_plan", [
@@ -110,8 +111,8 @@ export const listings = pgTable("listings", {
   longitude: decimal("longitude", { precision: 11, scale: 8 }),
 
   // Property Details
-  livingArea: integer("living_area").notNull(), // in square meters
-  totalArea: integer("total_area").notNull(), // in square meters
+  livingArea: doublePrecision("living_area").notNull(), // in square meters
+  totalArea: doublePrecision("total_area").notNull(), // in square meters
   bedrooms: integer("bedrooms"),
   bathrooms: integer("bathrooms"),
   condition: propertyConditionEnum("condition"),
@@ -120,7 +121,6 @@ export const listings = pgTable("listings", {
   // Energy Performance
   energyClass: energyClassEnum("energy_class"),
   ghgEmissionClass: ghgEmissionClassEnum("ghg_emission_class"),
-
 
   // Features
   amenities: json("amenities").$type<string[]>(),

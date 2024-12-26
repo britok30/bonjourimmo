@@ -1,15 +1,18 @@
 {
+  "nav": {
+    "menu": "Menu",
+    "browse": "Consulter les annonces",
+    "pricing": "Tarifs",
+    "locale": "Changer la langue",
+    "theme": "Changer le thème",
+    "signIn": "Se connecter"
+  },
   "home": {
     "theme": {
       "toggle": "Changer le thème",
       "light": "Clair",
       "dark": "Sombre",
       "system": "Système"
-    },
-    "nav": {
-      "pricing": "Tarifs",
-      "signIn": "Se connecter",
-      "browse": "Parcourir"
     },
     "hero": {
       "new": "Découvrez une nouvelle façon de vendre et louer en France",
@@ -184,7 +187,7 @@
       "condition": "État",
       "amenities": "Équipements",
       "images": "Photos",
-      "contactName": "Nom du contact (Écrivez 'Propriétaire' si vous souhaitez rester anonyme)",
+      "contactName": "Nom du contact",
       "contactPhone": "Numéro de téléphone",
       "contactEmail": "Adresse e-mail",
       "preferredContactMethod": "Méthode de contact préférée"
@@ -364,7 +367,7 @@
       "title": "Informations de contact",
       "fields": {
         "contactName": {
-          "label": "Nom du contact",
+          "label": "Nom du contact (Écrivez 'Propriétaire' si vous souhaitez rester anonyme)",
           "placeholder": "Entrez votre nom complet"
         },
         "contactPhone": {

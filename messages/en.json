@@ -1,15 +1,18 @@
 {
+  "nav": {
+    "menu": "Menu",
+    "browse": "Browse Listings",
+    "pricing": "Pricing",
+    "locale": "Change Language",
+    "theme": "Toggle Theme",
+    "signIn": "Sign In"
+  },
   "home": {
     "theme": {
       "toggle": "Toggle theme",
       "light": "Light",
       "dark": "Dark",
       "system": "System"
-    },
-    "nav": {
-      "pricing": "Pricing",
-      "signIn": "Sign In",
-      "browse": "Browse"
     },
     "hero": {
       "new": "Introducing a new way to sell and rent in France",
@@ -184,7 +187,7 @@
       "condition": "Condition",
       "amenities": "Amenities",
       "images": "Images",
-      "contactName": "Contact Name (Write 'Owner' if you want to remain anonymous)",
+      "contactName": "Contact Name",
       "contactPhone": "Phone Number",
       "contactEmail": "Email Address",
       "preferredContactMethod": "Preferred Contact Method"
@@ -364,7 +367,7 @@
       "title": "Contact Information",
       "fields": {
         "contactName": {
-          "label": "Contact Name",
+          "label": "Contact Name (Write 'Owner' if you want to remain anonymous)",
           "placeholder": "Enter your full name"
         },
         "contactPhone": {

@@ -159,14 +159,17 @@ export const newListingSchema = z
     contactPhone: z
       .string()
       .max(15, "Le numéro de téléphone est trop long")
-      .trim()
       .optional()
       .nullable()
-      .refine((val) => {
-        if (val === null || val === undefined || val === "") return true;
-        // French phone numbers: +33 or 0 followed by 9 digits
-        return /^(?:(?:\+33|0)[1-9](?:\d{2}){4})$/.test(val);
-      }, "Doit être un numéro de téléphone français valide"),
+      .transform((val) => (val ? val.replace(/\s+/g, "") : val)) // Remove spaces
+      .refine(
+        (val) =>
+          val === null ||
+          val === undefined ||
+          val === "" ||
+          /^(\+33|0)[1-9]\d{8}$/.test(val),
+        "Doit être un numéro de téléphone valide en France"
+      ),
 
     contactEmail: z
       .string()

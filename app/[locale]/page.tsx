@@ -17,6 +17,7 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
+import HomeNav from "@/components/HomeNav";
 
 const HomePage = () => {
   const t = useTranslations("home");
@@ -49,51 +50,7 @@ const HomePage = () => {
       {/* Hero Container with Background */}
       <div className="bg-hero bg-cover bg-center min-h-screen saturate-[1.5]">
         {/* Navigation */}
-        <motion.nav
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="border-b border-white/10"
-        >
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/">
-              <motion.h1
-                className="text-2xl font-bold tracking-tighter text-white relative"
-                whileHover={{ scale: 1.02 }}
-              >
-                BonjourImmo
-              </motion.h1>
-            </Link>
-
-            <div className="flex items-center gap-4">
-              <Link href="/listings">
-                <Button
-                  variant="ghost"
-                  className="text-white hover:text-white hover:bg-white/10"
-                >
-                  <Search className="h-4 w-4 mr-2" />
-                  {t("nav.browse")}
-                </Button>
-              </Link>
-              <Link href="/pricing">
-                <Button
-                  variant="ghost"
-                  className="text-white hover:text-white hover:bg-white/10"
-                >
-                  {t("nav.pricing")}
-                </Button>
-              </Link>
-              <div className="flex items-center gap-2">
-                <LocaleSwitcher />
-                <ThemeToggle />
-              </div>
-              <Link href="/sign-in">
-                <Button className="bg-white text-black hover:bg-white/90">
-                  {t("nav.signIn")}
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </motion.nav>
+        <HomeNav />
 
         {/* Hero Section */}
         <motion.section
@@ -157,9 +114,9 @@ const HomePage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="text-white bg-how bg-cover bg-center py-16 relative">
+      <section className="text-white h-[50vh] bg-how bg-cover bg-center py-16 relative">
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <h3 className="text-2xl font-semibold mb-12 text-center">

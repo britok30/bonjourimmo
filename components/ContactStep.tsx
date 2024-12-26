@@ -117,6 +117,10 @@ const ContactStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
                   placeholder={t("contactPhone.placeholder")}
                   value={field.value || ""}
                   autoComplete="off"
+                  onChange={(e) => {
+                    const normalizedValue = e.target.value.replace(/\s+/g, "");
+                    field.onChange(normalizedValue);
+                  }}
                   onBlur={(e) => {
                     field.onBlur();
                     if (e.target.value) {
