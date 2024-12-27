@@ -26,6 +26,7 @@ const isAPIRoute = createRouteMatcher([
   "/api/webhook",
   "/api/checkout",
   "/api/billing-portal",
+  "/api/contact"
 ]);
 
 export default clerkMiddleware(async (auth, req) => {

@@ -15,7 +15,7 @@
       "system": "System"
     },
     "hero": {
-      "new": "Introducing a new way to sell and rent in France",
+      "new": "New Launch! 🎉",
       "title": "Sell, Rent, or List Your Property Directly—Zero Commissions",
       "subtitle": "BonjourImmo empowers homeowners to take control of their real estate transactions, saving money and time with an effortless alternative to traditional agencies.",
       "cta": {
@@ -135,7 +135,8 @@
           "title": "Subscription",
           "currentPlan": "Current Plan",
           "upgradePlan": "Upgrade Plan",
-          "managePlan": "Manage Plan"
+          "managePlan": "Manage Plan",
+          "contact": "Contact Us"
         }
       },
       "errors": {
@@ -654,5 +655,36 @@
     "title": "Thank You for Your Purchase!",
     "description": "Your subscription has been successfully activated. Enjoy all the benefits of your BonjourImmo plan.",
     "button": "Go to Dashboard"
+  },
+  "contact": {
+    "back": "Back to Dashboard",
+    "title": "Contact Us",
+    "description": "We’d love to hear from you. Please fill out the form below.",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Your message"
+      }
+    },
+    "button": {
+      "sending": "Sending...",
+      "default": "Send Message"
+    },
+    "success": {
+      "title": "Message Sent",
+      "description": "We’ll get back to you soon!"
+    },
+    "error": {
+      "title": "Error",
+      "description": "Failed to send the message."
+    }
   }
 }

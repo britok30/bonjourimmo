@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-import { Settings, Sun, Moon, SparklesIcon, Loader2 } from "lucide-react";
+import { Settings, Sun, Moon, SparklesIcon, Loader2, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Link, usePathname } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
@@ -56,6 +56,7 @@ export function HeaderDropdown({ userPlan }: HeaderDropdownProps) {
       setPortalLoading(false);
     }
   };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -148,21 +149,33 @@ export function HeaderDropdown({ userPlan }: HeaderDropdownProps) {
           )}
 
           {userPlan !== "free" && (
-            <Button
-              className="w-full"
-              size="sm"
-              onClick={handleManageSubscription}
-              disabled={isPortalLoading}
-            >
-              {isPortalLoading ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <>
-                  <Settings className="mr-2 h-4 w-4" />
-                  {t("header.settings.subscription.managePlan")}
-                </>
+            <>
+              <Button
+                className="w-full"
+                size="sm"
+                onClick={handleManageSubscription}
+                disabled={isPortalLoading}
+              >
+                {isPortalLoading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <>
+                    <Settings className="mr-2 h-4 w-4" />
+                    {t("header.settings.subscription.managePlan")}
+                  </>
+                )}
+              </Button>
+
+              {/* Contact Option for Plus and Premium Users */}
+              {(userPlan === "plus" || userPlan === "premium") && (
+                <Link href="/contact" className="block">
+                  <Button className="w-full" size="sm">
+                    <Mail className="mr-2 h-4 w-4" />
+                    {t("header.settings.subscription.contact")}
+                  </Button>
+                </Link>
               )}
-            </Button>
+            </>
           )}
         </div>
       </DropdownMenuContent>

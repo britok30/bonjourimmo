@@ -15,7 +15,7 @@
       "system": "Système"
     },
     "hero": {
-      "new": "Découvrez une nouvelle façon de vendre et louer en France",
+      "new": "Nouveau Lancement! 🎉",
       "title": "Vendez, Louez ou Listez Votre Propriété Directement—Zéro Commissions",
       "subtitle": "BonjourImmo permet aux propriétaires de reprendre le contrôle de leurs transactions immobilières, économisant argent et temps avec une alternative simplifiée aux agences traditionnelles.",
       "cta": {
@@ -135,7 +135,8 @@
           "title": "Abonnement",
           "currentPlan": "Forfait actuel",
           "upgradePlan": "Améliorer le forfait",
-          "managePlan": "Gérer l'abonnement"
+          "managePlan": "Gérer l'abonnement",
+          "contact": "Contactez-nous"
         }
       },
       "errors": {
@@ -654,5 +655,36 @@
     "title": "Merci pour votre achat !",
     "description": "Votre abonnement a été activé avec succès. Profitez de tous les avantages de votre plan BonjourImmo.",
     "button": "Accéder au tableau de bord"
+  },
+  "contact": {
+    "back": "Retour au tableau de bord",
+    "title": "Contactez-nous",
+    "description": "Nous serions ravis de vous entendre. Veuillez remplir le formulaire ci-dessous.",
+    "fields": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "Votre nom"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Votre e-mail"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Votre message"
+      }
+    },
+    "button": {
+      "sending": "Envoi en cours...",
+      "default": "Envoyer le message"
+    },
+    "success": {
+      "title": "Message envoyé",
+      "description": "Nous vous répondrons bientôt !"
+    },
+    "error": {
+      "title": "Erreur",
+      "description": "Échec de l'envoi du message."
+    }
   }
 }

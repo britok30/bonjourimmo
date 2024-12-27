@@ -60,8 +60,8 @@ const HomePage = () => {
           className="container mx-auto px-4 py-24 md:py-32"
         >
           <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="secondary" className="mb-4 text-base font-light">
-              🚀 Nouveau lancement
+            <Badge variant="secondary" className="mb-4 text-base font-medium">
+              {t("hero.new")}
             </Badge>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
