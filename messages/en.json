@@ -169,6 +169,10 @@
       "contact": {
         "title": "Contact",
         "description": "How should interested parties reach you?"
+      },
+      "planSelection": {
+        "title": "Choose Your Plan",
+        "description": "Select a plan to determine your listing's visibility and priority."
       }
     },
     "fields": {
@@ -390,11 +394,37 @@
         }
       }
     },
+    "planSelection": {
+      "plans": {
+        "basic": {
+          "name": "Basic",
+          "price": "€29",
+          "description": "Basic visibility for your listing."
+        },
+        "plus": {
+          "name": "Plus",
+          "price": "€49",
+          "description": "Enhanced visibility to attract more viewers."
+        },
+        "premium": {
+          "name": "Premium",
+          "price": "€99",
+          "description": "Maximum exposure and priority placement."
+        }
+      },
+      "actions": {
+        "select": "Select"
+      }
+    },
     "errors": {
       "rateLimit": {
         "title": "Limit Reached",
         "description": "You have reached your monthly credit limit. Please upgrade your subscription to continue posting listings.",
         "action": "View Plans"
+      },
+      "planNotSelected": {
+        "title": "No Plan Selected",
+        "description": "Please select a plan to proceed with your listing."
       }
     }
   },
@@ -418,6 +448,11 @@
     "noListings": "No Listings Found",
     "noListingsDescription": "Try adjusting your filters or come back later to explore more properties.",
     "createFirstListing": "Create Your First Listing",
+    "plans": {
+      "basic": "Basic",
+      "plus": "Plus",
+      "premium": "Premium"
+    },
     "view": "View Details",
     "filters": {
       "title": "Filters",
@@ -653,7 +688,7 @@
   },
   "success": {
     "title": "Thank You for Your Purchase!",
-    "description": "Your subscription has been successfully activated. Enjoy all the benefits of your BonjourImmo plan.",
+    "description": "Your listing plan has been successfully activated. Enjoy all the benefits of your selected plan.",
     "button": "Go to Dashboard"
   },
   "contact": {

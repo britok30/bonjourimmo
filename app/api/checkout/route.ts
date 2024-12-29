@@ -13,24 +13,28 @@ export async function POST(req: Request) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    // Get plan from request
-    const { plan, locale } = await req.json();
-    const planConfig = STRIPE_PLANS[plan as keyof typeof STRIPE_PLANS];
+    // Parse request body
+    const { listingId, selectedPlan, locale } = await req.json();
 
-    if (!planConfig) {
-      return new NextResponse("Invalid plan", { status: 400 });
+    if (!listingId || !selectedPlan) {
+      return new NextResponse("Missing required parameters", { status: 400 });
     }
 
-    const url = inDevEnvironment
+    const planConfig = STRIPE_PLANS[selectedPlan];
+    if (!planConfig) {
+      return new NextResponse("Invalid plan selected", { status: 400 });
+    }
+
+    const baseUrl = inDevEnvironment
       ? "http://localhost:3000"
       : "https://www.bonjourimmo.com";
 
-    // Create Stripe checkout session
+    // Create Stripe checkout session for the selected plan
     const session = await stripe.checkout.sessions.create({
-      success_url: `${url}/success?type=${plan}`,
-      cancel_url: `${url}/pricing`,
+      success_url: `${baseUrl}/success?listingId=${listingId}&plan=${selectedPlan}`,
+      cancel_url: `${baseUrl}/create-listing?listingId=${listingId}`,
       payment_method_types: ["card"],
-      mode: "subscription",
+      mode: "payment",
       billing_address_collection: "auto",
       customer_email: user.emailAddresses[0].emailAddress,
       locale: locale,
@@ -41,11 +45,13 @@ export async function POST(req: Request) {
         },
       ],
       metadata: {
+        listingId,
         userId,
-        plan,
+        selectedPlan,
       },
     });
 
+    // Return session URL
     return NextResponse.json({ url: session.url });
   } catch (error) {
     console.error("Stripe error:", error);

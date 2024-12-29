@@ -6,8 +6,6 @@ type StripePriceId = {
 interface StripePlan {
   name: string;
   price_id: StripePriceId;
-  listingsPerMonth: number;
-  maxPhotos: number;
   price: {
     amount: number;
     currency: string;
@@ -15,29 +13,36 @@ interface StripePlan {
 }
 
 export const STRIPE_PLANS: Record<string, StripePlan> = {
+  basic: {
+    name: "Basic",
+    price_id: {
+      test: "price_1Qb2TKGsQpX8AIfwkxxLaEGB",
+      production: "price_1QbEQTGsQpX8AIfwOftnfh1X",
+    },
+    price: {
+      amount: 29,
+      currency: "EUR",
+    },
+  },
   plus: {
     name: "Plus",
     price_id: {
-      test: "price_1QZMjWGsQpX8AIfwHN4Khted",
-      production: "price_1QZjOMGsQpX8AIfwaSXOndIv",
+      test: "price_1Qb2UeGsQpX8AIfwdCSP4y5W",
+      production: "price_1QbEQWGsQpX8AIfwAVHCs0ue",
     },
-    listingsPerMonth: 10,
-    maxPhotos: 30,
     price: {
-      amount: 29,
+      amount: 49,
       currency: "EUR",
     },
   },
   premium: {
     name: "Premium",
     price_id: {
-      test: "price_1QZMmHGsQpX8AIfwUwjhMyft",
-      production: "price_1QZjOOGsQpX8AIfwYOM9mYzv",
+      test: "price_1Qb2VJGsQpX8AIfwnD1918Oe",
+      production: "price_1QbEQYGsQpX8AIfwakVoyraZ",
     },
-    listingsPerMonth: 25,
-    maxPhotos: 60,
     price: {
-      amount: 49,
+      amount: 99,
       currency: "EUR",
     },
   },

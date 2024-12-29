@@ -125,58 +125,13 @@ export function HeaderDropdown({ userPlan }: HeaderDropdownProps) {
 
         <DropdownMenuSeparator />
 
-        {/* Subscription Section */}
-        <DropdownMenuLabel className="text-xs">
-          {t("header.settings.subscription.title")}
-        </DropdownMenuLabel>
         <div className="px-2 py-1.5 space-y-2">
-          <div className="flex items-center justify-between px-2 mb-4">
-            <span className="text-sm">
-              {t("header.settings.subscription.currentPlan")}:
-            </span>
-            <Badge variant="secondary" className="capitalize">
-              {userPlan}
-            </Badge>
-          </div>
-
-          {userPlan === "free" && (
-            <Link href="/pricing" className="block">
-              <Button className="w-full" size="sm">
-                <SparklesIcon className="mr-2 h-4 w-4" />
-                {t("header.settings.subscription.upgradePlan")}
-              </Button>
-            </Link>
-          )}
-
-          {userPlan !== "free" && (
-            <>
-              <Button
-                className="w-full"
-                size="sm"
-                onClick={handleManageSubscription}
-                disabled={isPortalLoading}
-              >
-                {isPortalLoading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <>
-                    <Settings className="mr-2 h-4 w-4" />
-                    {t("header.settings.subscription.managePlan")}
-                  </>
-                )}
-              </Button>
-
-              {/* Contact Option for Plus and Premium Users */}
-              {(userPlan === "plus" || userPlan === "premium") && (
-                <Link href="/contact" className="block">
-                  <Button className="w-full" size="sm">
-                    <Mail className="mr-2 h-4 w-4" />
-                    {t("header.settings.subscription.contact")}
-                  </Button>
-                </Link>
-              )}
-            </>
-          )}
+          <Link href="/contact" className="block">
+            <Button className="w-full" size="sm">
+              <Mail className="mr-2 h-4 w-4" />
+              {t("header.settings.subscription.contact")}
+            </Button>
+          </Link>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

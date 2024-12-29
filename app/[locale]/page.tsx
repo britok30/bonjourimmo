@@ -205,10 +205,9 @@ const HomePage = () => {
             </p>
             <div className="flex gap-6">
               {[
-                { href: "/pricing", text: t("footer.pricing") },
                 // { href: "/privacy", text: t("footer.privacy") },
                 { href: "/terms", text: t("footer.terms") },
-                // { href: "/contact", text: t("footer.contact") },
+                { href: "/contact", text: t("footer.contact") },
               ].map(({ href, text }) => (
                 <Link key={href} href={href}>
                   <Button variant="link" className="text-sm">

@@ -8,7 +8,7 @@ export default async function sitemap() {
   const allListings = await db.select().from(listings);
 
   // Static routes
-  const routes = ["/listings", "/pricing", "/terms"];
+  const routes = ["/listings", "/terms"];
 
   const baseRoute = languages.map((lang) => ({
     url: `${baseUrl}/${lang}`,

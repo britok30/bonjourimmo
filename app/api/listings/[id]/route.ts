@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { listings } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { ADMIN_EMAIL } from "@/lib/utils";
+import { deleteFileFromS3 } from "@/lib/s3";
 
 export async function DELETE(
   req: Request,
@@ -23,7 +24,29 @@ export async function DELETE(
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    // Delete the listing
+    // Fetch the listing and its images
+    const listing = await db
+      .select({ images: listings.images })
+      .from(listings)
+      .where(eq(listings.id, parseInt(id)))
+      .limit(1);
+
+    if (listing.length === 0) {
+      return new NextResponse("Listing not found", { status: 404 });
+    }
+
+    const imageFileKeys = listing[0]?.images?.map((image) => image.key) || [];
+
+    // Delete images from S3
+    for (const fileKey of imageFileKeys) {
+      try {
+        await deleteFileFromS3(fileKey);
+      } catch (error) {
+        console.error(`Failed to delete file ${fileKey} from S3`, error);
+      }
+    }
+
+    // Delete the listing from the database
     await db.delete(listings).where(eq(listings.id, parseInt(id)));
 
     return new NextResponse(null, { status: 200 });

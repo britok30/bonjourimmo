@@ -20,13 +20,7 @@ import { newListingSchema } from "@/lib/listing-form-schema";
 
 type FormSchema = z.infer<typeof newListingSchema>;
 
-const ImagesStep = ({
-  form,
-  maxFiles,
-}: {
-  form: UseFormReturn<FormSchema>;
-  maxFiles: number;
-}) => {
+const ImagesStep = ({ form }: { form: UseFormReturn<FormSchema> }) => {
   const t = useTranslations("newListing.images");
 
   const {
@@ -35,9 +29,11 @@ const ImagesStep = ({
     formState: { isSubmitting },
   } = form;
 
+  const MAX_FILES = 30;
+
   const onDrop = (acceptedFiles: File[]) => {
     const currentFiles = form.getValues("images") || [];
-    const newFiles = [...currentFiles, ...acceptedFiles].slice(0, maxFiles);
+    const newFiles = [...currentFiles, ...acceptedFiles].slice(0, MAX_FILES);
     setValue("images", newFiles, { shouldValidate: true });
   };
 
@@ -50,6 +46,7 @@ const ImagesStep = ({
     maxSize: 25 * 1024 * 1024, // 25MB
     onDrop,
     multiple: true,
+    maxFiles: MAX_FILES,
   });
 
   return (
@@ -77,7 +74,7 @@ const ImagesStep = ({
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <Upload className="w-8 h-8 mb-4 text-muted-foreground" />
                     <p className="mb-2 text-sm text-muted-foreground">
-                      {t("dropzone.default", { maxFiles })}
+                      {t("dropzone.default", { maxFiles: MAX_FILES })}
                     </p>
                     <p className="text-xs text-muted-foreground">
                       {t("dropzone.hint")}

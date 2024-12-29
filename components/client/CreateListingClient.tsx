@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import type { z } from "zod";
 import { Link } from "@/i18n/routing";
@@ -17,6 +17,7 @@ import {
   ImagePlus,
   Phone,
   CircleDot,
+  SparklesIcon,
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { uploadToS3, getS3Url } from "@/lib/s3";
@@ -39,22 +40,15 @@ import LocationStep from "../LocationStep";
 import DetailsStep from "../DetailsStep";
 import ImagesStep from "../ImagesStep";
 import ContactStep from "../ContactStep";
+import PlanSelectionStep, { PricingPlan } from "../PlanSelectionStep";
 
-const IMAGE_LIMITS = {
-  free: 10,
-  plus: 30,
-  premium: 60,
-} as const;
-
-export default function CreateListingClient({
-  subscriptionTier,
-}: {
-  subscriptionTier: "free" | "plus" | "premium";
-}) {
+export default function CreateListingClient() {
   const t = useTranslations("newListing");
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
+  const locale = useLocale();
 
   // Google Maps Places Autocomplete
   const { isLoaded } = useLoadScript({
@@ -65,17 +59,12 @@ export default function CreateListingClient({
   const form = useForm<z.infer<typeof newListingSchema>>({
     resolver: zodResolver(newListingSchema),
     defaultValues: {
-      // Basic Information
       title: "",
       description: "",
       price: 0,
       propertyType: "house",
       listingType: "sale",
-
-      // Images
       images: [],
-
-      // Property Details
       amenities: [],
       livingArea: 0,
       totalArea: 0,
@@ -83,22 +72,15 @@ export default function CreateListingClient({
       bathrooms: 0,
       constructionYear: null,
       condition: "good",
-
-      // Location
       address: "",
       city: "",
       postalCode: "",
       latitude: null,
       longitude: null,
-
-      // Contact Information
       contactName: "",
       contactPhone: "",
       contactEmail: "",
       preferredContactMethod: undefined,
-
-      // Status
-      status: "active",
     },
   });
 
@@ -133,9 +115,13 @@ export default function CreateListingClient({
       icon: Phone,
       description: t("steps.contact.description"),
     },
+    {
+      id: "planSelection",
+      title: t("steps.planSelection.title"),
+      icon: SparklesIcon,
+      description: t("steps.planSelection.description"),
+    },
   ];
-
-  const currentStepProgress = ((currentStep + 1) / STEPS.length) * 100;
 
   const getFieldsForStep = (
     step: number
@@ -166,71 +152,53 @@ export default function CreateListingClient({
           "contactEmail",
           "preferredContactMethod",
         ];
+      case 5:
+        return []; // Plan selection does not have validation fields
       default:
         return [];
     }
   };
 
+  const currentStepProgress = ((currentStep + 1) / STEPS.length) * 100;
+
   const handleNext = useCallback(async () => {
     const fields = getFieldsForStep(currentStep);
-    // Validate current step fields
+
+    // Validate current step's fields
     const isValid = await form.trigger(fields);
-
-    if (isValid) {
-      // Clear errors for all non-current fields before moving to the next step
-      const allFields = Object.keys(form.getValues()) as Array<
-        keyof z.infer<typeof newListingSchema>
-      >;
-      const nonCurrentFields = allFields.filter(
-        (field) => !fields.includes(field)
-      );
-      form.clearErrors(nonCurrentFields);
-
-      // Move to the next step
-      setCurrentStep((prev) => Math.min(prev + 1, STEPS.length - 1));
+    if (!isValid) {
+      return;
     }
-  }, [currentStep, form]);
+
+    // Clear errors for non-current fields
+    const allFields = Object.keys(form.getValues()) as Array<
+      keyof z.infer<typeof newListingSchema>
+    >;
+    const nonCurrentFields = allFields.filter(
+      (field) => !fields.includes(field)
+    );
+    form.clearErrors(nonCurrentFields);
+
+    // Move to next step
+    setCurrentStep((prev) => Math.min(prev + 1, STEPS.length - 1));
+  }, [currentStep, form, selectedPlan, t]);
 
   const handleBack = () => {
-    // Clear errors for current step fields
-    const fields = getFieldsForStep(currentStep);
-    form.clearErrors(fields as Array<keyof z.infer<typeof newListingSchema>>);
-
     setCurrentStep((prev) => Math.max(prev - 1, 0));
   };
 
   const onSubmit = async (values: z.infer<typeof newListingSchema>) => {
+    if (!selectedPlan) {
+      toast({
+        title: t("errors.planNotSelected.title"),
+        description: t("errors.planNotSelected.description"),
+        variant: "destructive",
+      });
+      return;
+    }
+
     try {
       setIsSubmitting(true);
-
-      // First check if user can create listing
-      const checkResponse = await fetch("/api/listings/check");
-      if (!checkResponse.ok) {
-        const data = await checkResponse.json();
-
-        if (checkResponse.status === 429) {
-          toast({
-            title: t("errors.rateLimit.title"),
-            description: t("errors.rateLimit.description"),
-            variant: "destructive",
-            action: (
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => router.push("/pricing")}
-              >
-                {t("errors.rateLimit.action")}
-              </Button>
-            ),
-          });
-          return;
-        }
-
-        throw new Error(
-          data.error || "Something went wrong during rate limit check"
-        );
-      }
-
       const imagePromises = values.images.map(async (image) => {
         if (image instanceof File) {
           const { file_key } = await uploadToS3(image, image.name);
@@ -244,7 +212,7 @@ export default function CreateListingClient({
 
       const uploadedImages = await Promise.all(imagePromises);
 
-      const response = await fetch("/api/listings", {
+      const listingResponse = await fetch("/api/listings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -253,36 +221,37 @@ export default function CreateListingClient({
         }),
       });
 
-      if (!response.ok) {
+      if (!listingResponse.ok) {
         throw new Error("Failed to create listing");
       }
 
-      toast({
-        title: t("success.title"),
-        description: t("success.description"),
+      const { listingId } = await listingResponse.json();
+
+      const checkoutResponse = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          listingId,
+          selectedPlan,
+          locale: locale,
+        }),
       });
 
-      leadFormEvent();
+      if (!checkoutResponse.ok) {
+        throw new Error("Failed to create checkout session");
+      }
 
-      router.push("/dashboard");
+      const { url } = await checkoutResponse.json();
+      window.location.href = url;
     } catch (error) {
       toast({
-        title: t("error.title"),
-        description: t("error.description"),
+        title: t("errors.submit.title"),
+        description: t("errors.submit.description"),
         variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const leadFormEvent = () => {
-    // @ts-expect-error gtag is defined in the global scope
-    window.gtag("event", "conversion", {
-      send_to: "AW-16763653327/CSkSCNezv_wZEM-ZxLk-",
-      value: 1.0,
-      currency: "USD",
-    });
   };
 
   return (
@@ -295,7 +264,6 @@ export default function CreateListingClient({
                 <ArrowLeft className="h-4 w-4" />
               </Link>
             </Button>
-
             <div className="flex items-center gap-4">
               <Progress value={currentStepProgress} className="w-[100px]" />
               <p className="text-sm text-muted-foreground">
@@ -312,37 +280,33 @@ export default function CreateListingClient({
             onSubmit={form.handleSubmit(onSubmit)}
             className="w-full max-w-3xl space-y-8"
           >
-            <div className="hidden md:block">
-              <nav aria-label="Progress">
-                <ol role="list" className="flex items-center justify-between">
-                  {STEPS.map((step, index) => (
-                    <li key={step.id} className="relative flex items-center">
-                      <Button
-                        variant={currentStep >= index ? "default" : "outline"}
-                        className="h-10 w-10 rounded-full p-0"
-                        onClick={() =>
-                          index <= currentStep && setCurrentStep(index)
-                        }
-                        disabled={index > currentStep}
-                      >
-                        <step.icon className="h-5 w-5" />
-                        <span className="sr-only">{step.title}</span>
-                      </Button>
+            {/* Step Bubbles */}
+            <nav aria-label="Progress">
+              <ol role="list" className="flex items-center justify-between">
+                {STEPS.map((step, index) => (
+                  <li key={step.id} className="relative flex items-center">
+                    <Button
+                      variant={currentStep === index ? "default" : "outline"}
+                      className="h-10 w-10 rounded-full"
+                      onClick={() => setCurrentStep(index)}
+                      disabled={index > currentStep}
+                    >
+                      <step.icon className="h-5 w-5" />
+                    </Button>
+                    {index !== STEPS.length - 1 && (
+                      <div
+                        className={cn(
+                          "absolute left-full top-1/2 h-0.5 w-full -translate-y-1/2 transform",
+                          index < currentStep ? "bg-primary" : "bg-muted"
+                        )}
+                      />
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
 
-                      {index !== STEPS.length - 1 && (
-                        <div
-                          className={cn(
-                            "absolute left-full top-1/2 h-0.5 w-full -translate-y-1/2 transform",
-                            index < currentStep ? "bg-primary" : "bg-muted"
-                          )}
-                        />
-                      )}
-                    </li>
-                  ))}
-                </ol>
-              </nav>
-            </div>
-
+            {/* Content */}
             <Card>
               <CardHeader>
                 <CardTitle>{STEPS[currentStep].title}</CardTitle>
@@ -356,13 +320,14 @@ export default function CreateListingClient({
                   <LocationStep form={form} isLoaded={isLoaded} />
                 )}
                 {currentStep === 2 && <DetailsStep form={form} />}
-                {currentStep === 3 && (
-                  <ImagesStep
-                    form={form}
-                    maxFiles={IMAGE_LIMITS[subscriptionTier]}
+                {currentStep === 3 && <ImagesStep form={form} />}
+                {currentStep === 4 && <ContactStep form={form} />}
+                {currentStep === 5 && (
+                  <PlanSelectionStep
+                    onPlanSelect={(plan) => setSelectedPlan(plan)}
+                    selectedPlan={selectedPlan}
                   />
                 )}
-                {currentStep === 4 && <ContactStep form={form} />}
               </CardContent>
               <CardFooter className="flex justify-between">
                 <Button
@@ -374,7 +339,10 @@ export default function CreateListingClient({
                   {t("actions.back")}
                 </Button>
                 {currentStep === STEPS.length - 1 ? (
-                  <Button type="submit" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting || !selectedPlan}
+                  >
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />

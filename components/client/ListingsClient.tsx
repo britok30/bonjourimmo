@@ -23,7 +23,7 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Filters, ListingsFilters } from "@/components/ListingsFilter";
 import ListingsMap from "../ListingsMap";
 import { useUser } from "@clerk/nextjs";
-import { ADMIN_EMAIL } from "@/lib/utils";
+import { ADMIN_EMAIL, cn } from "@/lib/utils";
 import { DeleteButton } from "../DeleteButton";
 import listingsEmpty from "@/public/listings/empty.jpg";
 
@@ -116,6 +116,32 @@ export default function ListingsClient({
     return () => clearTimeout(timer);
   }, [searchValue]);
 
+  const getBadgeStyle = (plan: string) => {
+    switch (plan) {
+      case "premium":
+        return "bg-yellow-400 text-black";
+      case "plus":
+        return "bg-blue-500 text-white";
+      case "basic":
+        return "bg-gray-300 text-black";
+      default:
+        return "";
+    }
+  };
+
+  const getCardStyle = (plan: string) => {
+    switch (plan) {
+      case "premium":
+        return "border-4 border-yellow-400";
+      case "plus":
+        return "border-2 border-blue-500";
+      case "basic":
+        return "border border-gray-300";
+      default:
+        return "";
+    }
+  };
+
   return (
     <>
       <ListingsFilters
@@ -126,7 +152,6 @@ export default function ListingsClient({
       />
       <main className="flex-1 px-8">
         <div className="container mx-auto py-8 px-4">
-          {/* Header */}
           <div className="flex items-center gap-4 mb-8">
             <SidebarTrigger />
             <Button variant="ghost" size="icon" asChild>
@@ -136,7 +161,6 @@ export default function ListingsClient({
             </Button>
             <h1 className="text-3xl font-bold flex-1">{t("title")}</h1>
 
-            {/* View Toggle */}
             <div className="flex gap-2 bg-muted p-1 rounded-md">
               <Button
                 size="sm"
@@ -157,28 +181,6 @@ export default function ListingsClient({
             </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="relative max-w-xl mx-auto mb-8">
-            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder={t("searchPlaceholder")}
-              className="pl-9"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
-            {searchValue && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute right-2 top-1 h-8 w-8 p-0"
-                onClick={() => setSearchValue("")}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            )}
-          </div>
-
-          {/* Listings */}
           {filteredListings.length === 0 && !isLoading ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
               <div className="relative w-32 h-32 mb-4">
@@ -210,7 +212,10 @@ export default function ListingsClient({
               {filteredListings.map((listing) => (
                 <Card
                   key={listing.id}
-                  className="group overflow-hidden rounded-lg"
+                  className={cn(
+                    "group overflow-hidden rounded-lg",
+                    getCardStyle(listing.listingPlan)
+                  )}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -223,6 +228,9 @@ export default function ListingsClient({
                     <div className="absolute top-2 left-2 flex items-center gap-2 z-10">
                       <FavoriteButton listingId={listing.id} />
                       {isAdmin && <DeleteButton listingId={listing.id} />}
+                      <Badge className={getBadgeStyle(listing.listingPlan)}>
+                        {t(`plans.${listing.listingPlan}`)}
+                      </Badge>
                     </div>
                   </div>
                   <CardContent className="p-4">

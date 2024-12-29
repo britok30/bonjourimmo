@@ -10,8 +10,5 @@ export default async function CreateListingPage() {
     redirect("/sign-in");
   }
 
-  // Get user's subscription tier
-  const subscriptionTier = await getUserTier();
-
-  return <CreateListingClient subscriptionTier={subscriptionTier} />;
+  return <CreateListingClient />;
 }

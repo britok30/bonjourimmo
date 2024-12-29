@@ -26,14 +26,16 @@ export async function POST(req: Request) {
         ...data,
         slug,
         userId,
-        status: "active",
+        status: "inactive",
+        listingPlan: "basic", // Default plan
       })
-      .returning();
+      .returning({ id: listings.id }); // Only return the listing ID
 
+    // Send the newly created listing ID back for the Stripe session
     return NextResponse.json(
       {
-        message: "Listing created successfully",
-        listing: { ...newListing },
+        message: "Listing created successfully. Proceed to payment.",
+        listingId: newListing.id, // Return the ID for the Stripe session
       },
       { status: 201 }
     );

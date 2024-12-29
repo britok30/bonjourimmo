@@ -54,15 +54,6 @@ export default function HomeNav() {
                   </div>
                 </Link>
               </DropdownMenuItem>
-              {/* Pricing */}
-              <DropdownMenuItem asChild>
-                <Link href="/pricing">
-                  <div className="flex items-center gap-2">
-                    <Globe className="w-4 h-4" />
-                    {t("pricing")}
-                  </div>
-                </Link>
-              </DropdownMenuItem>
 
               {/* Sign In */}
               <DropdownMenuItem asChild>

@@ -8,11 +8,11 @@ import {
   timestamp,
   json,
   pgEnum,
-  doublePrecision
+  doublePrecision,
 } from "drizzle-orm/pg-core";
 
-export const subscriptionPlanEnum = pgEnum("subscription_plan", [
-  "free",
+export const listingPlanEnum = pgEnum("listing_plan", [
+  "basic",
   "plus",
   "premium",
 ]);
@@ -126,8 +126,12 @@ export const listings = pgTable("listings", {
   amenities: json("amenities").$type<string[]>(),
   images: json("images").$type<{ url: string; key: string }[]>(),
 
+  // Listing Plan & Priority
+  listingPlan: listingPlanEnum("listing_plan").default("basic").notNull(),
+  listingPriority: integer("listing_priority").default(1).notNull(),
+
   // Listing Status
-  status: listingStatusEnum("status").default("active").notNull(),
+  status: listingStatusEnum("status").default("inactive").notNull(),
 
   // Contact Information
   contactPhone: varchar("contact_phone", { length: 20 }).notNull(),

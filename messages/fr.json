@@ -169,6 +169,10 @@
       "contact": {
         "title": "Contact",
         "description": "Comment les intéressés peuvent-ils vous joindre ?"
+      },
+      "planSelection": {
+        "title": "Choisissez Votre Plan",
+        "description": "Sélectionnez un plan pour déterminer la visibilité et la priorité de votre annonce."
       }
     },
     "fields": {
@@ -390,11 +394,37 @@
         }
       }
     },
+    "planSelection": {
+      "plans": {
+        "basic": {
+          "name": "Basique",
+          "price": "29 €",
+          "description": "Visibilité de base pour votre annonce."
+        },
+        "plus": {
+          "name": "Plus",
+          "price": "49 €",
+          "description": "Visibilité améliorée pour attirer plus de visiteurs."
+        },
+        "premium": {
+          "name": "Premium",
+          "price": "99 €",
+          "description": "Exposition maximale et placement prioritaire."
+        }
+      },
+      "actions": {
+        "select": "Choisir"
+      }
+    },
     "errors": {
       "rateLimit": {
         "title": "Limite atteinte",
         "description": "Vous avez atteint la limite de vos crédits mensuels. Veuillez mettre à niveau votre abonnement pour continuer à publier des annonces.",
         "action": "Voir les abonnements"
+      },
+      "planNotSelected": {
+        "title": "Aucun plan sélectionné",
+        "description": "Veuillez sélectionner un plan pour continuer avec votre annonce."
       }
     }
   },
@@ -418,6 +448,11 @@
     "noListings": "Aucune annonce trouvée",
     "noListingsDescription": "Essayez d'ajuster vos filtres ou revenez plus tard pour explorer d'autres propriétés.",
     "createFirstListing": "Créez votre première annonce",
+    "plans": {
+      "basic": "Basique",
+      "plus": "Plus",
+      "premium": "Premium"
+    },
     "view": "Voir les détails",
     "filters": {
       "title": "Filtres",
@@ -653,8 +688,8 @@
   },
   "success": {
     "title": "Merci pour votre achat !",
-    "description": "Votre abonnement a été activé avec succès. Profitez de tous les avantages de votre plan BonjourImmo.",
-    "button": "Accéder au tableau de bord"
+    "description": "Votre plan d'annonce a été activé avec succès. Profitez de tous les avantages de votre plan sélectionné.",
+    "button": "Aller au tableau de bord"
   },
   "contact": {
     "back": "Retour au tableau de bord",
