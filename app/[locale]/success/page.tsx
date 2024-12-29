@@ -18,25 +18,15 @@ const SuccessPage = () => {
     premium: 99,
   };
 
-  // useEffect(() => {
-  //   // Redirect to imagine page after 5 seconds
-  //   const timer = setTimeout(() => {
-  //     router.push("/dashboard");
-  //   }, 5000);
-
-  //   return () => clearTimeout(timer);
-  // }, [router]);
-
   useEffect(() => {
     if (!plan) return;
-    // Send conversion event to Google Ads based on the subscription type
-
     const value = valueMap[plan];
     // @ts-expect-error gtag is defined in the global scope
+
     window.gtag("event", "conversion", {
-      send_to: "AW-16763653327/z1L3CLPJn_wZEM-ZxLk-",
+      send_to: "AW-16763653327/SvH1COj-x_0ZEM-ZxLk-",
       value: value,
-      currency: "EUR",
+      currency: "USD",
       transaction_id: "",
     });
   }, [plan]);
