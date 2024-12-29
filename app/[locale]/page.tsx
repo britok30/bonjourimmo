@@ -118,9 +118,9 @@ const HomePage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="text-white min-h-[50vh] bg-how bg-cover bg-center py-16 relative">
+      <section className="text-white min-h-[60vh] bg-how bg-cover bg-center py-16 relative">
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <h3 className="text-2xl font-semibold mb-12 text-center">
@@ -192,6 +192,51 @@ const HomePage = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="text-white min-h-[60vh] bg-pricing bg-cover bg-center py-16 relative">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <h3 className="text-2xl text-center font-semibold mb-4">
+            {t("payPerListing.title")}
+          </h3>
+          <p className="mb-6 text-center">
+            {t("payPerListing.subtitle")}
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                price: "29€",
+                title: t("payPerListing.basicTitle"),
+                description: t("payPerListing.basicDescription"),
+              },
+              {
+                price: "49€",
+                title: t("payPerListing.plusTitle"),
+                description: t("payPerListing.plusDescription"),
+              },
+              {
+                price: "99€",
+                title: t("payPerListing.premiumTitle"),
+                description: t("payPerListing.premiumDescription"),
+              },
+            ].map(({ price, title, description }, index) => (
+              <div
+                key={index}
+                className="text-center text-white bg-white/10 p-6 rounded-lg shadow-md"
+              >
+                <div className="text-3xl font-semibold mb-4 text-primary">
+                  {price}
+                </div>
+                <h4 className="font-medium text-lg mb-2">{title}</h4>
+                <p className="text-sm">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

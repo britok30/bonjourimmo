@@ -15,66 +15,76 @@
       "system": "System"
     },
     "hero": {
-      "new": "New Launch! 🎉",
-      "title": "Sell, Rent, or List Your Property Directly—Zero Commissions",
-      "subtitle": "BonjourImmo empowers homeowners to take control of their real estate transactions, saving money and time with an effortless alternative to traditional agencies.",
+      "new": "Just Launched! 🎉",
+      "title": "Sell, Rent, or List Your Property—No Commissions, Full Control",
+      "subtitle": "Take charge of your real estate journey with BonjourImmo. Save money, save time, and skip the hassle of traditional agencies.",
       "cta": {
-        "primary": "List Your Property",
-        "secondary": "Discover More"
+        "primary": "Get Started Today",
+        "secondary": "Learn More"
       }
     },
     "benefits": {
-      "title": "Why Choose Us?",
+      "title": "Why BonjourImmo?",
       "commission": {
-        "title": "No Hidden Costs",
-        "description": "Transparent, flat-rate pricing with zero commissions—ever."
+        "title": "100% Commission-Free",
+        "description": "Keep every penny of your profit with transparent, flat-rate pricing."
       },
       "direct": {
-        "title": "Total Control",
-        "description": "You’re in charge—manage listings and connect directly with buyers or renters."
+        "title": "You’re in Control",
+        "description": "List your property, connect directly with buyers or renters, and manage everything your way."
       },
       "control": {
-        "title": "Next-Gen Tools",
-        "description": "Showcase your property with modern design, more photos, and seamless navigation."
+        "title": "Showcase More Photos",
+        "description": "Stand out with up to 30 photos per listing—more than double what other platforms offer."
       },
       "secure": {
-        "title": "Secure & Trusted",
-        "description": "A verified platform with reliable users and responsive customer support."
+        "title": "Trusted & Secure",
+        "description": "A safe platform backed by verified users and dedicated support."
       }
     },
     "howItWorks": {
       "title": "How It Works",
       "step1": {
-        "title": "Create Your Listing",
-        "description": "Add high-quality photos, property details, and a compelling description."
+        "title": "List Your Property",
+        "description": "Add up to 30 high-quality photos, detailed descriptions, and key property info in just minutes."
       },
       "step2": {
-        "title": "Connect With Buyers or Renters",
-        "description": "Receive inquiries directly and manage communication on your terms."
+        "title": "Connect Directly",
+        "description": "Chat with buyers or renters directly to streamline the process."
       },
       "step3": {
-        "title": "Close Deals Your Way",
-        "description": "Finalize sales or rentals without intermediaries or unexpected fees."
+        "title": "Close on Your Terms",
+        "description": "Negotiate and finalize deals with no middlemen or hidden fees."
       }
     },
     "transparency": {
-      "title": "Why Choose BonjourImmo Over Traditional Agencies?",
+      "title": "Why Choose BonjourImmo Over Agencies?",
       "bonjourImmo": {
-        "title": "Why BonjourImmo?",
-        "noCommission": "Zero commission fees, saving you thousands.",
-        "directControl": "Direct control over your listings and communications.",
-        "streamlinedPosting": "Streamlined and effortless property posting.",
-        "effortlessManagement": "Manage everything in one simple dashboard.",
-        "affordability": "Affordable plans designed for private landlords."
+        "title": "The BonjourImmo Advantage",
+        "noCommission": "Say goodbye to commission fees and hello to more savings.",
+        "directControl": "Total control over your listings and conversations.",
+        "streamlinedPosting": "Simple, intuitive, and fast property postings.",
+        "effortlessManagement": "Manage everything with ease from your dashboard.",
+        "affordability": "Affordable plans tailored for private property owners."
       },
       "agencies": {
-        "title": "Why Not Traditional Agencies?",
-        "highCommission": "High commission rates that reduce your profit.",
-        "lackOfControl": "Limited control over your property listing and communication.",
-        "delays": "Delays caused by intermediaries and unnecessary steps.",
-        "hiddenFees": "Hidden fees that can surprise you later.",
-        "limitedTransparency": "Lack of transparency in processes and costs."
+        "title": "The Problem With Agencies",
+        "highCommission": "Sky-high commission rates that cut into your earnings.",
+        "lackOfControl": "Little to no control over your property’s visibility and communication.",
+        "delays": "Time-wasting intermediaries and lengthy processes.",
+        "hiddenFees": "Surprise fees that eat into your profit.",
+        "limitedTransparency": "Opaque pricing and unclear processes."
       }
+    },
+    "payPerListing": {
+      "title": "Pay-Per-Listing—No Subscriptions, Full Flexibility",
+      "subtitle": "With BonjourImmo, you pay only for the type of visibility you need. Whether it’s Basic, Plus, or Premium, every listing stays live until you decide otherwise.",
+      "basicTitle": "Basic Listing",
+      "basicDescription": "Ideal for homeowners who want a cost-effective way to list their property.",
+      "plusTitle": "Plus Listing",
+      "plusDescription": "Get better positioning to attract more views and inquiries.",
+      "premiumTitle": "Premium Listing",
+      "premiumDescription": "Maximum visibility with top positioning for the best exposure."
     },
     "footer": {
       "rights": "All rights reserved",

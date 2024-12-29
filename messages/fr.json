@@ -15,66 +15,76 @@
       "system": "Système"
     },
     "hero": {
-      "new": "Nouveau Lancement! 🎉",
-      "title": "Vendez, Louez ou Listez Votre Propriété Directement—Zéro Commissions",
-      "subtitle": "BonjourImmo permet aux propriétaires de reprendre le contrôle de leurs transactions immobilières, économisant argent et temps avec une alternative simplifiée aux agences traditionnelles.",
+      "new": "Nouveau Lancement ! 🎉",
+      "title": "Vendez, Louez ou Publiez Votre Bien Immobilier—Sans Commission, Avec un Contrôle Total",
+      "subtitle": "Prenez en main votre parcours immobilier avec BonjourImmo. Économisez de l'argent, gagnez du temps et évitez les tracas des agences traditionnelles.",
       "cta": {
-        "primary": "Publier votre annonce",
+        "primary": "Commencez dès aujourd'hui",
         "secondary": "En savoir plus"
       }
     },
     "benefits": {
-      "title": "Pourquoi nous choisir ?",
+      "title": "Pourquoi Choisir BonjourImmo ?",
       "commission": {
-        "title": "Aucun frais caché",
-        "description": "Des tarifs transparents, un forfait fixe, sans aucune commission."
+        "title": "100 % Sans Commission",
+        "description": "Gardez chaque centime de vos bénéfices grâce à des tarifs transparents et fixes."
       },
       "direct": {
-        "title": "Contrôle total",
-        "description": "Vous êtes maître de vos annonces—gérez et communiquez directement avec les acheteurs ou locataires."
+        "title": "Vous Êtes Aux Commandes",
+        "description": "Publiez votre bien, connectez-vous directement avec les acheteurs ou locataires et gérez tout selon vos préférences."
       },
       "control": {
-        "title": "Outils de dernière génération",
-        "description": "Mettez votre bien en valeur avec un design moderne, plus de photos et une navigation fluide."
+        "title": "Présentez Plus de Photos",
+        "description": "Démarquez-vous avec jusqu'à 30 photos par annonce—plus du double de ce que proposent d'autres plateformes."
       },
       "secure": {
-        "title": "Sécurisé et fiable",
-        "description": "Une plateforme vérifiée avec des utilisateurs de confiance et un support client réactif."
+        "title": "Fiable et Sécurisé",
+        "description": "Une plateforme sécurisée avec des utilisateurs vérifiés et un support dédié."
       }
     },
     "howItWorks": {
-      "title": "Comment ça marche",
+      "title": "Comment Ça Marche",
       "step1": {
-        "title": "Créez votre annonce",
-        "description": "Ajoutez des photos de qualité, des détails précis et une description attrayante."
+        "title": "Créez Votre Annonce",
+        "description": "Ajoutez jusqu'à 30 photos de qualité, une description détaillée et les informations clés de votre bien en quelques minutes."
       },
       "step2": {
-        "title": "Connectez-vous avec acheteurs ou locataires",
-        "description": "Recevez des demandes directement et gérez les échanges selon vos préférences."
+        "title": "Connectez-Vous Directement",
+        "description": "Discutez directement avec les acheteurs ou locataires pour simplifier le processus."
       },
       "step3": {
-        "title": "Concluez vos transactions",
-        "description": "Finalisez vos ventes ou locations sans intermédiaire ni frais imprévus."
+        "title": "Concluez Selon Vos Termes",
+        "description": "Négociez et finalisez vos transactions sans intermédiaires ni frais cachés."
       }
     },
     "transparency": {
-      "title": "Pourquoi choisir BonjourImmo plutôt qu'une agence traditionnelle ?",
+      "title": "Pourquoi Choisir BonjourImmo Plutôt Que des Agences ?",
       "bonjourImmo": {
-        "title": "Pourquoi BonjourImmo ?",
-        "noCommission": "Aucun frais de commission, économisez des milliers.",
-        "directControl": "Contrôle direct de vos annonces et de vos communications.",
-        "streamlinedPosting": "Publication simplifiée et sans effort.",
-        "effortlessManagement": "Gérez tout dans un tableau de bord simple.",
+        "title": "Les Avantages de BonjourImmo",
+        "noCommission": "Dites adieu aux frais de commission et bonjour à plus d'économies.",
+        "directControl": "Un contrôle total sur vos annonces et vos échanges.",
+        "streamlinedPosting": "Des publications simples, intuitives et rapides.",
+        "effortlessManagement": "Gérez tout facilement depuis votre tableau de bord.",
         "affordability": "Des plans abordables conçus pour les propriétaires privés."
       },
       "agencies": {
-        "title": "Pourquoi pas les agences traditionnelles ?",
-        "highCommission": "Des commissions élevées qui réduisent vos profits.",
-        "lackOfControl": "Contrôle limité sur votre annonce et vos communications.",
-        "delays": "Des délais causés par des intermédiaires et des étapes inutiles.",
-        "hiddenFees": "Des frais cachés qui peuvent surprendre.",
-        "limitedTransparency": "Manque de transparence dans les processus et les coûts."
+        "title": "Les Inconvénients des Agences",
+        "highCommission": "Des frais de commission exorbitants qui réduisent vos gains.",
+        "lackOfControl": "Peu ou pas de contrôle sur la visibilité et les échanges de votre bien.",
+        "delays": "Des délais causés par des intermédiaires et des processus inutiles.",
+        "hiddenFees": "Des frais cachés qui grèvent vos bénéfices.",
+        "limitedTransparency": "Des prix opaques et des processus peu clairs."
       }
+    },
+    "payPerListing": {
+      "title": "Payez Par Annonce—Pas d’Abonnement, Une Flexibilité Totale",
+      "subtitle": "Avec BonjourImmo, vous ne payez que pour la visibilité dont vous avez besoin. Que ce soit Basic, Plus ou Premium, chaque annonce reste en ligne jusqu'à ce que vous décidiez autrement.",
+      "basicTitle": "Annonce Basic",
+      "basicDescription": "Idéal pour les propriétaires qui souhaitent un moyen économique de publier leur bien.",
+      "plusTitle": "Annonce Plus",
+      "plusDescription": "Profitez d’un meilleur positionnement pour attirer plus de vues et d’interactions.",
+      "premiumTitle": "Annonce Premium",
+      "premiumDescription": "Visibilité maximale avec un positionnement en tête pour une exposition optimale."
     },
     "footer": {
       "rights": "Tous droits réservés",
