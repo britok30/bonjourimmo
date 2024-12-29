@@ -51,10 +51,10 @@ export default function TermsPage() {
             <p className="text-muted-foreground leading-relaxed">
               Veuillez lire attentivement ces Conditions, ainsi que notre
               Politique de Confidentialité et tous les autres documents
-              référencés ici, y compris les Plans d'Abonnement ou les Directives
-              d'Utilisation. Ensemble, ces Conditions et les documents associés
-              constituent un accord unique et contraignant entre vous et
-              BonjourImmo (l'“Accord”).
+              référencés ici, y compris les Tarifs de Publication ou les
+              Directives d'Utilisation. Ensemble, ces Conditions et les
+              documents associés constituent un accord unique et contraignant
+              entre vous et BonjourImmo (l'“Accord”).
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Cet Accord prend effet lorsque l'Utilisateur est présenté avec ces
@@ -70,15 +70,15 @@ export default function TermsPage() {
             <p className="text-muted-foreground leading-relaxed">
               BonjourImmo est conçu pour permettre aux propriétaires de vendre,
               louer ou proposer des biens de vacances directement, offrant une
-              expérience simplifiée et sans commission. La plateforme vise à
-              faciliter la gestion des biens, améliorer leur visibilité et
-              permettre une communication directe entre les propriétaires et les
-              locataires ou acheteurs potentiels. Bien que BonjourImmo s'efforce
-              de fournir un environnement sécurisé et efficace, nous n'agissons
-              pas en tant qu'agence immobilière et ne fournissons pas de
-              conseils professionnels en immobilier, juridique ou financier. Les
-              utilisateurs sont seuls responsables de garantir l'exactitude et
-              la légalité de leurs annonces et leur conformité aux lois et
+              expérience simplifiée et sans commission récurrente. La plateforme
+              vise à faciliter la gestion des biens, améliorer leur visibilité
+              et permettre une communication directe entre les propriétaires et
+              les locataires ou acheteurs potentiels. Bien que BonjourImmo
+              s'efforce de fournir un environnement sécurisé et efficace, nous
+              n'agissons pas en tant qu'agence immobilière et ne fournissons pas
+              de conseils professionnels en immobilier, juridique ou financier.
+              Les utilisateurs sont seuls responsables de garantir l'exactitude
+              et la légalité de leurs annonces et leur conformité aux lois et
               règlements applicables.
             </p>
           </section>
