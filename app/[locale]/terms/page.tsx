@@ -256,7 +256,7 @@ export default function TermsPage() {
               Paiement et Facturation
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              BonjourImmo peut facturer vos frais d'utilisation de la plateforme
+              BonjourImmo peut facturer les frais de publication de vos annonces
               via un prestataire de services de paiement tiers, notamment
               Stripe. Les conditions générales de service du prestataire de
               paiement tiers prévaudront et remplaceront les présentes
@@ -268,29 +268,22 @@ export default function TermsPage() {
               du mode de paiement que vous fournissez.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Vous pouvez annuler votre abonnement à tout moment via la section
-              gestion de compte du site. En cas d'annulation, votre accès aux
-              Services restera actif jusqu'à la fin de la période d'abonnement
-              en cours. Aucun remboursement ne sera accordé pour la durée
-              restante de la période d'abonnement ; cependant, aucun frais
-              supplémentaire ne sera facturé après la fin de la période
-              d'abonnement. Veuillez noter que tout manquement à nos directives
-              communautaires ou toute utilisation inappropriée des Services
-              constitue une violation des présentes conditions et peut entraîner
-              la résiliation de votre accès à BonjourImmo sans remboursement.
-              Aucun remboursement ne sera accordé pour les Services déjà
-              utilisés.
+              Les frais de publication sont non remboursables une fois la
+              transaction effectuée. Veuillez vérifier attentivement les détails
+              de votre annonce et les frais correspondants avant de confirmer
+              votre paiement. Toute modification ou suppression d’une annonce
+              après sa publication ne donnera lieu à aucun remboursement, sauf
+              en cas d’erreur imputable à BonjourImmo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              BonjourImmo se réserve le droit de modifier ses prix, ses plans
-              d'abonnement et ses offres. Toute modification des tarifs sera
+              BonjourImmo se réserve le droit de modifier ses tarifs et ses
+              offres de publication. Toute modification des tarifs sera
               communiquée aux utilisateurs via un avis préalable raisonnable. Il
               est de votre responsabilité de consulter les frais et les
-              conditions applicables avant d'acheter ou de renouveler un
-              abonnement. Des informations supplémentaires concernant les plans
-              d'abonnement, les politiques de facturation, les taxes, les
-              remboursements et les autorisations de paiement sont disponibles
-              ici.
+              conditions applicables avant de procéder à une nouvelle
+              publication. Des informations supplémentaires concernant les
+              politiques de facturation, les taxes et les paiements sont
+              disponibles ici.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               BonjourImmo n'est pas responsable des problèmes liés aux services
@@ -299,9 +292,8 @@ export default function TermsPage() {
               problèmes directement avec le prestataire de paiement, tel que
               Stripe. Si le paiement n'est pas traité avec succès en raison de
               fonds insuffisants, de modes de paiement expirés ou pour d'autres
-              raisons, nous nous réservons le droit de suspendre ou de résilier
-              votre accès aux Services jusqu'à ce que tous les frais en attente
-              soient réglés.
+              raisons, votre annonce ne sera pas publiée. Vous pouvez réessayer
+              avec un autre mode de paiement ou contacter votre prestataire.
             </p>
           </section>
 
