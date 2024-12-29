@@ -7,6 +7,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Euro,
   Clock,
@@ -19,6 +20,7 @@ import {
 } from "lucide-react";
 import HomeNav from "@/components/HomeNav";
 import { Badge } from "@/components/ui/badge";
+import cta from "@/public/cta.jpg";
 
 const HomePage = () => {
   const t = useTranslations("home");
@@ -120,7 +122,7 @@ const HomePage = () => {
       {/* How It Works Section */}
       <section className="text-white min-h-[60vh] bg-how bg-cover bg-center py-16 relative">
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <h3 className="text-2xl font-semibold mb-12 text-center">
@@ -199,15 +201,13 @@ const HomePage = () => {
       {/* Pricing Section */}
       <section className="text-white min-h-[60vh] bg-pricing bg-cover bg-center py-16 relative">
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <h3 className="text-2xl text-center font-semibold mb-4">
             {t("payPerListing.title")}
           </h3>
-          <p className="mb-6 text-center">
-            {t("payPerListing.subtitle")}
-          </p>
+          <p className="mb-6 text-center">{t("payPerListing.subtitle")}</p>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
@@ -230,13 +230,44 @@ const HomePage = () => {
                 key={index}
                 className="text-center text-white bg-white/10 p-6 rounded-lg shadow-md"
               >
-                <div className="text-3xl font-semibold mb-4 text-primary">
+                <div className="text-3xl text-white font-semibold mb-4 text-primary">
                   {price}
                 </div>
                 <h4 className="font-medium text-lg mb-2">{title}</h4>
                 <p className="text-sm">{description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+          {/* Image */}
+          <div className="flex-1">
+            <Image
+              src={cta}
+              alt="Showcase your property"
+              width={600} // Adjust width as needed
+              height={400} // Adjust height as needed
+              className="rounded-lg shadow-lg"
+              placeholder="blur"
+            />
+          </div>
+
+          {/* Text + Button */}
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-2xl font-semibold mb-4">
+              {t("ctaSection.title")}
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              {t("ctaSection.subtitle")}
+            </p>
+            <Link href="/sign-in">
+              <Button size="lg" variant="secondary">
+                {t("ctaSection.button")}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -86,6 +86,11 @@
       "premiumTitle": "Annonce Premium",
       "premiumDescription": "Visibilité maximale avec un positionnement en tête pour une exposition optimale."
     },
+    "ctaSection": {
+      "title": "Prêt à Publier Votre Bien Immobilier ?",
+      "subtitle": "Faites le premier pas pour vendre ou louer votre bien sans commission. Créez votre compte dès aujourd'hui et commencez en quelques minutes !",
+      "button": "Commencez Maintenant"
+    },
     "footer": {
       "rights": "Tous droits réservés",
       "pricing": "Tarifs",

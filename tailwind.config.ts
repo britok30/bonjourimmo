@@ -68,9 +68,8 @@ export default {
       },
       backgroundImage: {
         hero: "linear-gradient(rgba(0,0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(/hero.jpg)",
-        how: "linear-gradient(rgba(0,0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/how-it-works.jpg)",
-        pricing:
-          "linear-gradient(rgba(0,0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/pricing.jpg)",
+        how: "url(/how-it-works.jpg)",
+        pricing: "url(/pricing.jpg)",
         "sign-in":
           "linear-gradient(rgba(0,0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/sign-in.jpg)",
         success:

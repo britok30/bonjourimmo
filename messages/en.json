@@ -86,6 +86,11 @@
       "premiumTitle": "Premium Listing",
       "premiumDescription": "Maximum visibility with top positioning for the best exposure."
     },
+    "ctaSection": {
+      "title": "Ready to List Your Property?",
+      "subtitle": "Take the first step towards selling or renting your property without commissions. Create your account today and get started in minutes!",
+      "button": "Get Started Now"
+    },
     "footer": {
       "rights": "All rights reserved",
       "pricing": "Pricing",
