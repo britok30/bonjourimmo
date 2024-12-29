@@ -23,10 +23,8 @@ import { Label } from "../ui/label";
 
 export default function MyListingsClient({
   listings,
-  subscriptionTier,
 }: {
   listings: Listing[];
-  subscriptionTier: "free" | "plus" | "premium";
 }) {
   const t = useTranslations("myListings");
 
@@ -142,35 +140,30 @@ export default function MyListingsClient({
                     {listing.address}, {listing.city}
                   </p>
                   <div className="flex flex-col gap-4">
-                    {(subscriptionTier === "premium" ||
-                      subscriptionTier === "plus") && (
-                      <div>
-                        <Label className="mb-3 inline-block">
-                          {t("status")}
-                        </Label>
+                    <div>
+                      <Label className="mb-3 inline-block">{t("status")}</Label>
 
-                        <Select
-                          value={listing.status}
-                          onValueChange={(value) =>
-                            updateListingStatus(listing.id, value as any)
-                          }
-                        >
-                          <SelectTrigger className="w-full">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {(listing.listingType === "sale"
-                              ? ["active", "sold", "inactive"]
-                              : ["active", "rented", "inactive"]
-                            ).map((status) => (
-                              <SelectItem key={status} value={status}>
-                                {t(`statuses.${status}`)}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    )}
+                      <Select
+                        value={listing.status}
+                        onValueChange={(value) =>
+                          updateListingStatus(listing.id, value as any)
+                        }
+                      >
+                        <SelectTrigger className="w-full">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {(listing.listingType === "sale"
+                            ? ["active", "sold"]
+                            : ["active", "rented"]
+                          ).map((status) => (
+                            <SelectItem key={status} value={status}>
+                              {t(`statuses.${status}`)}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
 
                     <Button variant="outline" size="sm" asChild>
                       <Link href={`/listings/${listing.slug}`}>

@@ -1,6 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getSubscription, getUserTier } from "@/lib/subscription";
 import CreateListingClient from "../../../components/client/CreateListingClient";
 
 export default async function CreateListingPage() {

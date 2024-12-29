@@ -16,46 +16,16 @@ import { useLocale, useTranslations } from "next-intl";
 import { toast } from "@/hooks/use-toast";
 import { useState } from "react";
 
-interface HeaderDropdownProps {
-  userPlan: "free" | "plus" | "premium";
-}
-
-export function HeaderDropdown({ userPlan }: HeaderDropdownProps) {
+export function HeaderDropdown() {
   const locale = useLocale();
   const pathname = usePathname();
   const { setTheme, theme } = useTheme();
   const t = useTranslations("dashboard");
-  const [isPortalLoading, setPortalLoading] = useState(false);
 
   const locales = [
     { code: "fr", label: "Français", flag: "🇫🇷" },
     { code: "en", label: "English", flag: "🇬🇧" },
   ];
-
-  const handleManageSubscription = async () => {
-    try {
-      setPortalLoading(true);
-      const response = await fetch("/api/billing-portal", {
-        method: "POST",
-        body: JSON.stringify({ locale }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to access billing portal");
-      }
-
-      const data = await response.json();
-      window.location.href = data.url;
-    } catch (error) {
-      toast({
-        title: t("header.errors.portal.title"),
-        description: t("header.errors.portal.description"),
-        variant: "destructive",
-      });
-    } finally {
-      setPortalLoading(false);
-    }
-  };
 
   return (
     <DropdownMenu>

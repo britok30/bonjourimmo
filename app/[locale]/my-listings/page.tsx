@@ -19,12 +19,5 @@ export default async function MyListingsPage() {
     .where(eq(listings.userId, userId))
     .orderBy(desc(listings.createdAt));
 
-  const subscriptionTier = await getUserTier();
-
-  return (
-    <MyListingsClient
-      listings={userListings}
-      subscriptionTier={subscriptionTier}
-    />
-  );
+  return <MyListingsClient listings={userListings} />;
 }

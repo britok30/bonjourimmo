@@ -45,11 +45,7 @@ const actions = [
   },
 ];
 
-const DashboardClient = ({
-  subscriptionTier,
-}: {
-  subscriptionTier: "free" | "plus" | "premium";
-}) => {
+const DashboardClient = () => {
   const t = useTranslations("dashboard");
 
   return (
@@ -63,7 +59,7 @@ const DashboardClient = ({
 
           <div className="flex items-center gap-4">
             <FranceClock />
-            <HeaderDropdown userPlan={subscriptionTier} />
+            <HeaderDropdown />
             <UserButton afterSignOutUrl="/" />
           </div>
         </div>
