@@ -79,7 +79,6 @@ const PlanSelectionStep = ({
                 onClick={() => handleSelectPlan(plan)}
                 variant={selectedPlan === plan.id ? "default" : "outline"}
                 className="w-full"
-                disabled={!!selectedPlan}
               >
                 {t("actions.select")}
               </Button>
