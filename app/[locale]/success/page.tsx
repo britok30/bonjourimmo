@@ -10,11 +10,12 @@ const SuccessPage = () => {
   const t = useTranslations("success");
   const router = useRouter();
   const searchParams = useSearchParams();
-  const type = searchParams.get("type");
+  const plan = searchParams.get("plan");
 
   const valueMap: Partial<Record<string, number>> = {
-    plus: 29,
-    premium: 49,
+    basic: 29,
+    plus: 49,
+    premium: 99,
   };
 
   // useEffect(() => {
@@ -27,10 +28,10 @@ const SuccessPage = () => {
   // }, [router]);
 
   useEffect(() => {
-    if (!type) return;
+    if (!plan) return;
     // Send conversion event to Google Ads based on the subscription type
 
-    const value = valueMap[type];
+    const value = valueMap[plan];
     // @ts-expect-error gtag is defined in the global scope
     window.gtag("event", "conversion", {
       send_to: "AW-16763653327/z1L3CLPJn_wZEM-ZxLk-",
@@ -38,7 +39,7 @@ const SuccessPage = () => {
       currency: "EUR",
       transaction_id: "",
     });
-  }, [type]);
+  }, [plan]);
 
   return (
     <div className="min-h-screen bg-success bg-cover flex items-center justify-center bg-background text-white">
