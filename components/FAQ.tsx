@@ -23,8 +23,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="max-w-3xl mx-auto py-12">
-      <h2 className="text-2xl mb-4">{t("title")}</h2>
+    <section className="max-w-3xl mx-auto py-4">
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>

@@ -92,11 +92,12 @@
       "button": "Get Started Now"
     },
     "footer": {
-      "rights": "All rights reserved",
-      "pricing": "Pricing",
-      "privacy": "Privacy",
-      "terms": "Terms",
-      "contact": "Contact Us"
+      "tagline": "Sell, rent, or list your property with ease.",
+      "rights": "All rights reserved.",
+      "linksTitle": "Quick Links",
+      "terms": "Terms of Service",
+      "contact": "Contact Us",
+      "faq": "FAQ"
     }
   },
   "auth": {
@@ -627,78 +628,33 @@
     "error": "Something went wrong",
     "signInRequired": "Please sign in to add to favorites"
   },
-  "pricing": {
-    "title": "Pricing Plans",
-    "subtitle": "Choose the best plan for your needs. Upgrade anytime as your requirements grow.",
-    "back": "Back to Dashboard",
-    "mostPopular": "Most Popular",
-    "perMonth": "/mo",
-    "processing": "Processing...",
-    "tiers": {
-      "free": {
-        "name": "Free",
-        "price": "€0",
-        "description": "Ideal for trying out the platform with a single listing.",
-        "features": [
-          "Post 1 listing per month",
-          "Up to 10 images per listing",
-          "Standard search visibility"
-        ],
-        "buttonText": "Start for Free"
-      },
-      "plus": {
-        "name": "Plus",
-        "price": "€29",
-        "description": "Reach more tenants with multiple listings and enhanced visibility.",
-        "features": [
-          "Post up to 10 listings per month",
-          "Up to 30 images per listing",
-          "Priority search visibility",
-          "Modify status of listings",
-          "No long term commitments, cancel anytime"
-        ],
-        "buttonText": "Choose Plus"
-      },
-      "premium": {
-        "name": "Premium",
-        "price": "€49",
-        "description": "Get maximum exposure and professional-grade features.",
-        "features": [
-          "Post up to 25 listings per month",
-          "Up to 60 images per listing",
-          "Modify status of listings",
-          "Top search placement",
-          "No long term commitments, cancel anytime"
-        ],
-        "buttonText": "Choose Premium"
-      }
-    }
-  },
   "faq": {
     "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about BonjourImmo.",
+    "back": "Back to Home",
     "questions": {
-      "q1": "How does BonjourImmo ensure my property gets seen?",
+      "q1": "How does BonjourImmo ensure my property gets noticed?",
       "q2": "Are there any hidden fees?",
       "q3": "Can I modify my listing after posting?",
-      "q4": "What happens if I exceed my monthly listing limit?",
+      "q4": "Is there a limit to the number of listings I can post?",
       "q5": "Is my data secure on BonjourImmo?",
       "q6": "What types of properties can I list?",
-      "q7": "Can I cancel my subscription anytime?",
+      "q7": "Can I change or deactivate my listing anytime?",
       "q8": "How do I communicate with potential buyers or renters?",
-      "q9": "What’s the difference between the Plus and Premium plans?",
+      "q9": "What’s the difference between Basic, Plus, and Premium listings?",
       "q10": "Can agencies list properties on BonjourImmo?"
     },
     "answers": {
-      "a1": "We use a priority-based search algorithm to rank listings based on their relevance and visibility settings. Listings in the Plus or Premium plans enjoy higher placement in search results.",
-      "a2": "No hidden fees—our pricing is fully transparent. Unlike agencies, we do not take a percentage of your sale or rent.",
-      "a3": "Yes, you can modify your listing's status anytime based on its type. If you want to make additional changes to your listing (e.g., description, images, or price), you can: \n\n1. Change the status to 'Inactive' and create a new listing under your Plus or Premium plan.\n2. Contact our support team, and we will handle the changes for you free of charge.",
-      "a4": "You can upgrade your plan to increase your limit or wait until the next billing cycle when your limit resets.",
-      "a5": "Yes, we prioritize your data security with industry-standard encryption and verified user accounts.",
-      "a6": "You can list any property type, including apartments, houses, land, and vacation rentals, for sale, rent, or short-term stays.",
-      "a7": "Absolutely! Our plans are flexible with no long-term commitments. You can cancel or change your plan anytime.",
-      "a8": "We do not provide an in-app messaging system. To ensure interested buyers or renters can contact you, we recommend providing your best contact information (e.g., phone number or email) when creating your listing.",
-      "a9": "The Plus plan offers 10 listings/month and priority search visibility, while Premium provides 25 listings/month, top placement, and unlimited modifications.",
-      "a10": "BonjourImmo is dedicated exclusively to private landlords, providing a commission-free platform for direct transactions."
+      "a1": "We use a priority-based search algorithm to boost visibility for Plus and Premium listings. Premium listings enjoy top placement, ensuring they attract the most attention.",
+      "a2": "No hidden fees—our pricing is straightforward. You only pay a one-time fee for your chosen listing type (Basic, Plus, or Premium).",
+      "a3": "Yes, you can update the status of your listing (e.g., Active, Sold, Rented) directly from your dashboard. For other updates, such as title or description changes, please contact our support team via the contact page. We'll handle these updates for you free of charge.",
+      "a4": "There is no monthly limit for listings. Each listing is a one-time purchase (Basic, Plus, or Premium) and stays live until you deactivate it.",
+      "a5": "Yes, your data is protected with industry-standard encryption, and all user accounts are verified for added security.",
+      "a6": "You can list apartments, houses, land, or vacation rentals for sale or rent. The platform is versatile to suit various property types.",
+      "a7": "Yes, you can update the status of your listing (e.g., Active, Sold, Rented, Inactive) anytime from your dashboard. Changes in status may affect your listing’s visibility in search results.",
+      "a8": "We recommend including your preferred contact information (e.g., phone number or email) in your listing so interested buyers or renters can reach you directly.",
+      "a9": "Basic listings are affordable and standard. Plus listings enjoy better search placement, while Premium listings get top placement and maximum visibility for the best exposure.",
+      "a10": "No, BonjourImmo is exclusively for private landlords. Agencies are not allowed to list properties on the platform."
     }
   },
   "success": {

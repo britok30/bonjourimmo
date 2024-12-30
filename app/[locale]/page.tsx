@@ -273,7 +273,70 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8 mt-auto">
+      <footer className="bg-muted/50 py-12">
+        <div className="container mx-auto px-4">
+          {/* Footer Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Logo + Tagline */}
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo.png" // Path to your logo
+                alt="BonjourImmo Logo"
+                width={40} // Adjust the size as needed
+                height={40}
+                className="rounded-sm" // Optional styling
+              />
+              <div>
+                <h2 className="text-lg font-semibold text-primary">
+                  BonjourImmo
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  {t("footer.tagline", {
+                    defaultMessage:
+                      "Sell, rent, or list your property with ease.",
+                  })}
+                </p>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-md font-semibold mb-4">
+                {t("footer.linksTitle")}
+              </h3>
+              <ul className="space-y-2">
+                {[
+                  { href: "/terms", text: t("footer.terms") },
+                  { href: "/contact", text: t("footer.contact") },
+                  {
+                    href: "/faq",
+                    text: t("footer.faq", { defaultMessage: "FAQ" }),
+                  },
+                ].map(({ href, text }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="border-t mt-8 pt-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2024 BonjourImmo.{" "}
+              {t("footer.rights", { defaultMessage: "All rights reserved." })}
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      {/* <footer className="border-t py-8 mt-auto">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
@@ -294,7 +357,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

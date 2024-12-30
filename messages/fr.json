@@ -92,11 +92,12 @@
       "button": "Commencez Maintenant"
     },
     "footer": {
-      "rights": "Tous droits réservés",
-      "pricing": "Tarifs",
-      "privacy": "Confidentialité",
-      "terms": "Conditions",
-      "contact": "Contactez-nous"
+      "tagline": "Vendez, louez ou publiez votre bien facilement.",
+      "rights": "Tous droits réservés.",
+      "linksTitle": "Liens Utiles",
+      "terms": "Conditions d'Utilisation",
+      "contact": "Nous Contacter",
+      "faq": "FAQ"
     }
   },
   "auth": {
@@ -627,78 +628,33 @@
     "error": "Une erreur s'est produite",
     "signInRequired": "Veuillez vous connecter pour ajouter aux favoris"
   },
-  "pricing": {
-    "title": "Plans de Tarification",
-    "subtitle": "Choisissez le plan qui correspond le mieux à vos besoins. Passez à un plan supérieur à tout moment selon vos exigences.",
-    "back": "Retour au Tableau de Bord",
-    "mostPopular": "Le Plus Populaire",
-    "perMonth": "/mois",
-    "processing": "Traitement en cours...",
-    "tiers": {
-      "free": {
-        "name": "Gratuit",
-        "price": "€0",
-        "description": "Idéal pour découvrir la plateforme avec une seule annonce.",
-        "features": [
-          "Publiez 1 annonce par mois",
-          "Jusqu'à 10 images par annonce",
-          "Visibilité standard dans les recherches"
-        ],
-        "buttonText": "Commencer Gratuitement"
-      },
-      "plus": {
-        "name": "Plus",
-        "price": "€29",
-        "description": "Touchez davantage de locataires avec plusieurs annonces et une visibilité accrue.",
-        "features": [
-          "Publiez jusqu'à 10 annonces par mois",
-          "Jusqu'à 30 images par annonce",
-          "Visibilité prioritaire dans les recherches",
-          "Modifiez le statut des annonces",
-          "Sans engagement, annulez à tout moment"
-        ],
-        "buttonText": "Choisir Plus"
-      },
-      "premium": {
-        "name": "Premium",
-        "price": "€49",
-        "description": "Maximisez votre visibilité avec des fonctionnalités de niveau professionnel.",
-        "features": [
-          "Publiez jusqu'à 25 annonces par mois",
-          "Jusqu'à 60 images par annonce",
-          "Modifiez le statut des annonces",
-          "Placement en tête des recherches",
-          "Sans engagement, annulez à tout moment"
-        ],
-        "buttonText": "Choisir Premium"
-      }
-    }
-  },
   "faq": {
     "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez les réponses aux questions les plus fréquentes sur BonjourImmo.",
+    "back": "Retour à l'accueil",
     "questions": {
-      "q1": "Comment BonjourImmo garantit-il la visibilité de mon bien immobilier?",
-      "q2": "Y a-t-il des frais cachés?",
-      "q3": "Puis-je modifier mon annonce après sa publication?",
-      "q4": "Que se passe-t-il si je dépasse ma limite mensuelle d'annonces?",
-      "q5": "Mes données sont-elles sécurisées sur BonjourImmo?",
-      "q6": "Quels types de biens puis-je publier?",
-      "q7": "Puis-je annuler mon abonnement à tout moment?",
-      "q8": "Comment communiquer avec des acheteurs ou locataires potentiels?",
-      "q9": "Quelle est la différence entre les abonnements Plus et Premium?",
-      "q10": "Les agences peuvent-elles publier des annonces sur BonjourImmo?"
+      "q1": "Comment BonjourImmo garantit-il que mon bien soit vu ?",
+      "q2": "Y a-t-il des frais cachés ?",
+      "q3": "Puis-je modifier mon annonce après sa publication ?",
+      "q4": "Y a-t-il une limite au nombre d'annonces que je peux publier ?",
+      "q5": "Mes données sont-elles sécurisées sur BonjourImmo ?",
+      "q6": "Quels types de biens puis-je publier ?",
+      "q7": "Puis-je modifier ou désactiver mon annonce à tout moment ?",
+      "q8": "Comment puis-je communiquer avec les acheteurs ou locataires potentiels ?",
+      "q9": "Quelle est la différence entre les annonces Basic, Plus et Premium ?",
+      "q10": "Les agences peuvent-elles publier des biens sur BonjourImmo ?"
     },
     "answers": {
-      "a1": "Nous utilisons un algorithme de recherche basé sur des priorités pour classer les annonces en fonction de leur pertinence et des paramètres de visibilité. Les annonces des plans Plus ou Premium bénéficient d’un meilleur classement dans les résultats de recherche.",
-      "a2": "Aucun frais caché—nos tarifs sont totalement transparents. Contrairement aux agences, nous ne prenons pas de pourcentage sur vos ventes ou locations.",
-      "a3": "Oui, vous pouvez modifier le statut de votre annonce à tout moment en fonction de son type. Si vous souhaitez effectuer d'autres modifications (description, photos ou prix, par exemple), vous pouvez : \n\n1. Changer le statut en 'Inactif' et créer une nouvelle annonce dans votre plan Plus ou Premium.\n2. Contacter notre équipe d'assistance, et nous apporterons les modifications gratuitement pour vous.",
-      "a4": "Vous pouvez passer à un abonnement supérieur pour augmenter votre limite ou attendre le prochain cycle de facturation, lorsque votre limite sera réinitialisée.",
-      "a5": "Oui, nous priorisons la sécurité de vos données grâce à un cryptage de niveau industriel et à des comptes utilisateurs vérifiés.",
-      "a6": "Vous pouvez publier tout type de bien, y compris des appartements, maisons, terrains et locations de vacances, pour la vente, la location ou les séjours de courte durée.",
-      "a7": "Bien sûr ! Nos abonnements sont flexibles, sans engagement à long terme. Vous pouvez annuler ou modifier votre abonnement à tout moment.",
-      "a8": "Nous ne fournissons pas de système de messagerie intégré. Pour garantir que les acheteurs ou locataires intéressés puissent vous contacter, nous vous recommandons d’ajouter vos meilleures informations de contact (par exemple, numéro de téléphone ou email) lors de la création de votre annonce.",
-      "a9": "Le plan Plus offre 10 annonces/mois avec une visibilité prioritaire dans les recherches, tandis que le plan Premium offre 25 annonces/mois, un placement en tête et des modifications illimitées.",
-      "a10": "BonjourImmo est exclusivement dédié aux propriétaires particuliers, offrant une plateforme sans commission pour des transactions directes."
+      "a1": "Nous utilisons un algorithme de recherche prioritaire pour améliorer la visibilité des annonces Plus et Premium. Les annonces Premium bénéficient d'un positionnement en tête de liste, garantissant une attention maximale.",
+      "a2": "Aucun frais caché—nos tarifs sont clairs et transparents. Vous ne payez qu'une seule fois pour le type d'annonce choisi (Basic, Plus ou Premium).",
+      "a3": "Oui, vous pouvez mettre à jour le statut de votre annonce (par exemple : Active, Vendue, Louée) directement depuis votre tableau de bord. Pour d'autres modifications, comme un changement de titre ou de description, contactez notre équipe via la page de contact. Nous prendrons en charge ces modifications gratuitement.",
+      "a4": "Il n'y a pas de limite mensuelle au nombre d'annonces. Chaque annonce est un achat unique (Basic, Plus ou Premium) et reste active jusqu'à ce que vous la désactiviez.",
+      "a5": "Oui, vos données sont protégées grâce à un chiffrement conforme aux normes de l'industrie, et tous les comptes utilisateurs sont vérifiés pour garantir une sécurité accrue.",
+      "a6": "Vous pouvez publier des appartements, maisons, terrains ou locations de vacances, à vendre ou à louer. La plateforme est conçue pour s'adapter à différents types de biens.",
+      "a7": "Oui, vous pouvez mettre à jour le statut de votre annonce (par exemple : Active, Vendue, Louée, Inactive) à tout moment depuis votre tableau de bord. Les modifications de statut peuvent affecter la visibilité de votre annonce dans les résultats de recherche.",
+      "a8": "Nous vous recommandons d'inclure vos coordonnées préférées (par exemple : numéro de téléphone ou e-mail) dans votre annonce afin que les acheteurs ou locataires intéressés puissent vous contacter directement.",
+      "a9": "Les annonces Basic sont abordables et standard. Les annonces Plus bénéficient d'un meilleur positionnement dans les recherches, tandis que les annonces Premium sont en tête de liste et offrent une visibilité maximale.",
+      "a10": "Non, BonjourImmo est exclusivement réservé aux propriétaires particuliers. Les agences ne sont pas autorisées à publier des biens sur la plateforme."
     }
   },
   "success": {
